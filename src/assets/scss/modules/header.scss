@@ -1,4 +1,82 @@
 // header style
 header {
-  font-family: $decorFont;
+  font-family: $mainFont;
+  outline: 1px solid red;
 }
+.header-top {
+  display: grid;
+  grid-template-columns: 0.9fr 2.1fr 1.5fr;
+  padding: 15px 0 20px 0;
+  span {
+    font-size: rem(14);
+    display: inline-block;
+  }
+}
+.header-logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0 25px 0 0;
+  img {
+    position: absolute;
+  }
+}
+.header-contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  span {
+    width: 50%;
+  }
+  &--sity::before {
+    content: '';
+    margin: 0 10px 0 0;
+    display: inline-block;
+    background-image: url("/assets/img/maps-header.png");
+    background-repeat: no-repeat;
+    width: 11px;
+    height: 16px;
+  }
+  &--number::before {
+    content: '';
+    margin: 0 10px 0 0;
+    display: inline-block;
+    background-image: url("/assets/img/mail-header.png");
+    background-repeat: no-repeat;
+    width: 11px;
+    height: 10px;
+  }
+}
+.header-feedback {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  p {
+    text-align: left;
+    padding: 0 5px 0 0;
+    //width: 100%;
+    strong {
+      display: block;
+      font-size: rem(18);
+    }
+    span {
+      font-size: rem(10);
+    }
+  }
+  button {
+    font-size: rem(13);
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: $primary-color;
+    border: 1px solid $primary-color;
+    border-radius: 5px;
+    padding: 12px;
+    &:hover {
+      background-color: $primary-color;
+      color: $secondFontColor;
+    }
+  }
+}
+
