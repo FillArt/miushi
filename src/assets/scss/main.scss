@@ -43,7 +43,21 @@ ul, li {
   padding: 0;
   list-style-type: none;
 }
+*::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: $form-color ;
+}
 
+*::-webkit-scrollbar {
+  width: 6px;
+  background-color: $form-color
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $primary-color;
+  border-radius: 100px;
+}
 section, .section {
   position: relative;
   padding: 40px 0;
