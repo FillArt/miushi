@@ -16,4 +16,12 @@ Vue.component("example-component", require("./components/Example.vue").default);
 // Vue init
 const app = new Vue({
   el: "#app",
+  data: () => ({
+    menu: false
+  }),
+  methods: {
+    menuModal() {
+      this.menu = !this.menu;
+    }
+  }
 });

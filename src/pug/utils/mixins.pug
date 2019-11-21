@@ -6,3 +6,7 @@ mixin item(title, descr)
 mixin item-menu(name, boolean)
   li
     span(class=boolean ? 'header-menu--arrow': 'header-menu--item')= name
+mixin header-feedback(number, subtitle)
+  p
+    strong= number
+    span= subtitle
