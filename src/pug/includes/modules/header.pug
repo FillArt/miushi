@@ -11,5 +11,21 @@ header
           strong +7 (800) 333 2 222
           span Работаем с 11.00 до 23.00
         button Обратный звонок
+  .line
+  .container
+    .header-bottom
+      .header-menu
+        ul
+          +item-menu('Меню', true)
+          +item-menu('Акции и скидки')
+          +item-menu('Доставка и оплата')
+          +item-menu('Новости')
+          +item-menu('Контакты')
+
+      .header-user
+        span.header-user--cabinet Кабинет
+        span.header-user--basket Корзина
+          .header-user-counter
+            span 0
 
 

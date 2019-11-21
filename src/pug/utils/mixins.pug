@@ -2,3 +2,7 @@ mixin item(title, descr)
   .item
     h2.item-title= title
     p.item-descr= descr
+
+mixin item-menu(name, boolean)
+  li
+    span(class=boolean ? 'header-menu--arrow': 'header-menu--item')= name
