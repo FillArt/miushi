@@ -15,9 +15,9 @@ block main
       img.mySlides(src='/assets/img/main-slider.jpg')
       img.mySlides(src='/assets/img/main-slider.jpg')
       img.mySlides(src='/assets/img/main-slider.jpg')
-      .container
-        button.main-slider--prev(@click='plusDivs(-1)') &#10094;
-        button.main-slider--next(@click='plusDivs(+1)') &#10095;
+      .main-button
+        button.main-button--prev(@click='plusDivs(-1)') &#10094;
+        button.main-button--next(@click='plusDivs(+1)') &#10095;
 
 block content
   section

@@ -1,17 +1,29 @@
 .main-slider {
+  display: grid;
   position: relative;
-  width: 100%;
   img {
-    width: 100%;
     background-size: cover;
   }
 }
-.main-slider--prev,
-.main-slider--next {
+.main-button {
+  position: absolute;
+  align-content: center;
+  top: 0;bottom: 0;left: 0;right: 0;
+  margin: auto;
+  display: grid;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  grid-template-columns: 1fr 1fr;
+}
+.main-button--prev,
+.main-button--next {
+  display: grid;
   width: 53px;
   height: 53px;
   color: $secondFontColor;
   cursor: pointer;
+  align-content: center;
   background-color: rgb(0,0,0);
   opacity: 0.7;
   border-radius: 50%;
@@ -19,6 +31,6 @@
     opacity: 1;
   }
 }
-.main-slider--next {
-
+.main-button--next {
+  justify-self: end;
 }
