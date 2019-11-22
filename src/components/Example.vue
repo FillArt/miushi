@@ -3,14 +3,13 @@
 </template>
 
 <script>
-
 export default {
-  data () {
+  data() {
     return {
-      message: '',
-    }
-  }
-}
+      message: ""
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>

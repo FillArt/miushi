@@ -9,6 +9,20 @@ block content
     .container
   example-component
 
+block main
+  section
+    .main-slider
+      img.mySlides(src='/assets/img/main-slider.jpg')
+      img.mySlides(src='/assets/img/main-slider.jpg')
+      img.mySlides(src='/assets/img/main-slider.jpg')
+      .container
+        button.main-slider--prev(@click='plusDivs(-1)') &#10094;
+        button.main-slider--next(@click='plusDivs(+1)') &#10095;
+
+block content
+  section
+    .container
+
 block script
   script(type='text/javascript').
     const foo = true;

@@ -5,6 +5,7 @@
 @import "utils/reset";
 
 @import "modules/header";
+@import "modules/main-slider";
 
 html {
   line-height: $mainLineHeight;
@@ -60,7 +61,7 @@ ul, li {
 }
 section, .section {
   position: relative;
-  padding: 40px 0;
+  //padding: 40px 0;
   @media screen and (max-width: $desktopWidth) {
     padding: 36px 0;
   }

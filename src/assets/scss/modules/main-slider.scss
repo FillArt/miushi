@@ -1,0 +1,24 @@
+.main-slider {
+  position: relative;
+  width: 100%;
+  img {
+    width: 100%;
+    background-size: cover;
+  }
+}
+.main-slider--prev,
+.main-slider--next {
+  width: 53px;
+  height: 53px;
+  color: $secondFontColor;
+  cursor: pointer;
+  background-color: rgb(0,0,0);
+  opacity: 0.7;
+  border-radius: 50%;
+  &:hover {
+    opacity: 1;
+  }
+}
+.main-slider--next {
+
+}
