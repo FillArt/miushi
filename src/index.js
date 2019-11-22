@@ -17,7 +17,8 @@ Vue.component("example-component", require("./components/Example.vue").default);
 const app = new Vue({
   el: "#app",
   data: () => ({
-    menu: false
+    menu: false,
+    productCounter: 0,
   }),
   methods: {
     menuModal() {
