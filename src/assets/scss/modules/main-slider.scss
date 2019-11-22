@@ -1,14 +1,19 @@
 .main-slider {
   display: grid;
   position: relative;
+  width: 100%;
   img {
+    width: 100%;
     background-size: cover;
   }
 }
 .main-button {
   position: absolute;
   align-content: center;
-  top: 0;bottom: 0;left: 0;right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   margin: auto;
   display: grid;
   justify-content: center;
