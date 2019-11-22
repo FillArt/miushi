@@ -146,8 +146,25 @@ header {
       color: $secondFontColor;
     }
   }
+  @media screen and (max-width: $smDesktopWidth) {
+    font-family: $boldFont;
+    margin: 15px 0 50px 0;
+    li {
+      display: block;
+      padding: 0;
+      &:hover {
+        background-color: transparent;
+        opacity: 0.5;
+        color: black;
+      }
+      span {
+        text-transform: uppercase;
+        padding: 0 0 35px 0;
+      }
+    }
+  }
 }
-.header-menu-item, .header-menu--item {
+.header-menu--item {
   font-size: rem(14);
 }
 .header-menu--arrow {
@@ -215,4 +232,70 @@ header {
   width: 11px;
   height: 11px;
 }
+.header-modal {
+  display: none;
+  @media screen and (max-width: $smDesktopWidth) {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1px solid red;
+    background-color: $default-color;
+    padding: 25px 60px 60px 60px;
+    max-width: 380px;
+    width: 100%;
+    &--sity::before,  &--number::before {
+      content: '';
+      margin: 0 10px 0 0;
+      display: inline-block;
+      background-repeat: no-repeat;
+    }
+    &--sity::before {
+      background-image: url("/assets/img/maps-header.png");
+      width: 11px;
+      height: 16px;
+    }
+    &--number::before {
+      background-image: url("/assets/img/mail-header.png");
+      width: 11px;
+      height: 10px;
+    }
+    img {
+      margin-left: 100%;
+    }
+    p {
+      margin: 0 0 10px 0;
+      strong {
+        display: block;
+        font-size: rem(18);
+      }
+      span {
+        display: inline-block;
+        width: 100%;
+        font-size: rem(10);
+      }
+    }
+    span {
+      display: block;
+      width: 100%;
+      padding: 0 0 20px 0;
+    }
+    button {
+      font-size: rem(13);
+      cursor: pointer;
+      text-transform: uppercase;
+      background-color: transparent;
+      margin: 0 0 25px 0;
+      color: $primary-color;
+      border: 1px solid $primary-color;
+      border-radius: 5px;
+      padding: 12px;
+      &:hover {
+        background-color: $primary-color;
+        color: $secondFontColor;
+      }
+    }
+  }
+}
 
+//------------------------------------------
