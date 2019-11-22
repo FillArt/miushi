@@ -22,6 +22,11 @@ const app = new Vue({
   methods: {
     menuModal() {
       this.menu = !this.menu;
+      if (this.menu) {
+        document.getElementById("app").classList.add("header-menu--bg");
+      } else {
+        document.getElementById("app").classList.remove("header-menu--bg");
+      }
     }
   }
 });

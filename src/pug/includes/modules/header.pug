@@ -7,18 +7,19 @@ header
         span.header-contact--sity г.Курск, ул.Ленина, д.3
         span.header-contact--number 78003332222@yandex.ru
         img(src="/assets/img/menu-header.png" @click='menuModal')
-        .header-modal(v-if="menu")
-          img(src="/assets/img/close-menu.png" @click="menuModal")
-          .header-menu
-            ul
-              +item-menu('Меню')
-              +item-menu('Акции и скидки')
-              +item-menu('Доставка и оплата')
-              +item-menu('Контакты')
-          +header-feedback('+7 (800) 333 2 222', 'Работаем с 11.00 до 23.00')
-          button Обратный звонок
-          span.header-modal--sity г.Курск, ул.Ленина, д.3
-          span.header-modal--number 78003332222@yandex.ru
+        .header-modal--bg
+          .header-modal(v-if="menu")
+            img(src="/assets/img/close-menu.png" @click="menuModal")
+            .header-menu
+              ul
+                +item-menu('Меню')
+                +item-menu('Акции и скидки')
+                +item-menu('Доставка и оплата')
+                +item-menu('Контакты')
+            +header-feedback('+7 (800) 333 2 222', 'Работаем с 11.00 до 23.00')
+            button Обратный звонок
+            span.header-modal--sity г.Курск, ул.Ленина, д.3
+            span.header-modal--number 78003332222@yandex.ru
 
       .header-feedback
         +header-feedback('+7 (800) 333 2 222', 'Работаем с 11.00 до 23.00')
