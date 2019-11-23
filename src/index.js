@@ -29,8 +29,7 @@ const app = new Vue({
       sliderList: [
         {img: '/assets/img/main-slider.jpg'},
         {img: '/assets/img/main-slider.jpg'},
-        {img: 'https://dummyimage.com/wsvga'},
-        {img: 'https://dummyimage.com/wsvga'}      
+        {img: '/assets/img/main-slider.jpg'},     
 			]
   }),
   methods: {
