@@ -12,12 +12,14 @@ block content
 block main
   section
     .main-slider
-      //img.mySlides(src='/assets/img/main-slider.jpg')
       .slider.js-slider
         .slider__body(:style='{left: sliderOffsetLeft + "px"}')
           .slider__slide.js-slide(v-for='slide in sliderList', :style='"background-image: url(" + slide.img + ")"')
-            span 123
-    
+            .container
+              .main-slider--text
+                span.main-slider--title Счастливые  часы
+                span.main-slider--subtitle с 11:00 до 16:00 в будние дни
+                button.main-slider--detail Подробнее
       .main-slider--button
         button.main-slider--prev(@click='prevSlide') &#10094;
         button.main-slider--next(@click='nextSlide') &#10095;
