@@ -12,12 +12,15 @@ block content
 block main
   section
     .main-slider
-      img.mySlides(src='/assets/img/main-slider.jpg')
-      img.mySlides(src='/assets/img/main-slider.jpg')
-      img.mySlides(src='/assets/img/main-slider.jpg')
-      .main-button
-        button.main-button--prev(@click='plusDivs(-1)') &#10094;
-        button.main-button--next(@click='plusDivs(+1)') &#10095;
+      //img.mySlides(src='/assets/img/main-slider.jpg')
+      .slider.js-slider
+        .slider__body(:style='{left: sliderOffsetLeft + "px"}')
+          .slider__slide.js-slide(v-for='slide in sliderList', :style='"background-image: url(" + slide.img + ")"')
+            span 123
+    
+      .main-slider--button
+        button.main-slider--prev(@click='prevSlide') &#10094;
+        button.main-slider--next(@click='nextSlide') &#10095;
 
 block content
   section
