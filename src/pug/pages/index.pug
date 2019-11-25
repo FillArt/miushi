@@ -16,10 +16,7 @@ block main
         .slider__body(:style='{left: sliderOffsetLeft + "px"}')
           .slider__slide.js-slide(v-for='slide in sliderList', :style='"background-image: url(" + slide.img + ")"')
             .container
-              .main-slider--text
-                span.main-slider--title Счастливые  часы
-                span.main-slider--subtitle с 11:00 до 16:00 в будние дни
-                button.main-slider--detail Подробнее
+              +text-slide( '{{ slide.title }}' , '{{ slide.subtitle }}')
       .main-slider--button
         button.main-slider--prev(@click='prevSlide') &#10094;
         button.main-slider--next(@click='nextSlide') &#10095;
