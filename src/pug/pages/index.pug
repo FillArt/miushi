@@ -18,14 +18,16 @@ block main
                                   :style='"background-image: url(" + slide.img + ")"')
             .container
               .main-slider--text
-                +text-slide( '{{ slide.title }}' ,
+                +text-slide( '{{ slide.title }}'  ,
                             '{{ slide.subtitle }}',
                             '{{ slide.discount }}',
                             '{{ slide.sumDiscount }}')
       .main-slider--button
         button.main-slider--prev(@click='prevSlide') &#10094;
         .main-slider--points
-          input(type='radio', name="slide", v-for='i in sliderAllCount')
+          .main-slider--dot(v-for='i in sliderAllCount')
+            input(type='radio', :id='[`mainSlide-` + i]', name="slide")
+            label(:for='[`mainSlide-` + i]')
         button.main-slider--next(@click='nextSlide') &#10095;
 
 block content
