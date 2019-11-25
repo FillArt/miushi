@@ -12,8 +12,9 @@ mixin header-feedback(number, subtitle)
     strong= number
     span= subtitle
 
-mixin text-slide(title, subtitle)
-  .main-slider--text
+mixin text-slide(title, subtitle, boolean, discount)
     span.main-slider--title= title
+      span.main-discount(v-if='slide.discount') скидка
+        strong= discount + ' %'
     span.main-slider--subtitle= subtitle
     button.main-slider--detail Подробнее

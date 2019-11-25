@@ -16,7 +16,8 @@ block main
         .slider__body(:style='{left: sliderOffsetLeft + "px"}')
           .slider__slide.js-slide(v-for='slide in sliderList', :style='"background-image: url(" + slide.img + ")"')
             .container
-              +text-slide( '{{ slide.title }}' , '{{ slide.subtitle }}')
+              .main-slider--text
+                +text-slide( '{{ slide.title }}' , '{{ slide.subtitle }}', '{{ slide.discount }}', '{{ slide.sumDiscount }}')
       .main-slider--button
         button.main-slider--prev(@click='prevSlide') &#10094;
         button.main-slider--next(@click='nextSlide') &#10095;
