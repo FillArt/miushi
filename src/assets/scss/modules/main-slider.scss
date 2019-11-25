@@ -6,7 +6,7 @@ $slide-width: 100%;
 	height: $slider-height;
 	position: relative;
 	overflow: hidden;
-	&__body {
+	&-body {
 		min-width: auto;
 		height: $slider-height;
 		display: flex;
@@ -14,7 +14,7 @@ $slide-width: 100%;
 		align-items: stretch;
 		transition: all .5s ease;
 	}
-	&__slide {
+	&-slide {
 		min-width: $slide-width;
 		height: $slider-height;
 		background-size: cover;

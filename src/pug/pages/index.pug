@@ -13,8 +13,8 @@ block main
   section
     .main-slider
       .slider.js-slider
-        .slider__body(:style='{left: sliderOffsetLeft + "px"}')
-          .slider__slide.js-slide(v-for='slide in sliderList',
+        .slider-body(:style='{left: sliderOffsetLeft + "px"}')
+          .slider-slide.js-slide(v-for='slide in sliderList',
                                   :style='"background-image: url(" + slide.img + ")"')
             .container
               .main-slider--text
@@ -26,8 +26,8 @@ block main
         button.main-slider--prev(@click='prevSlide') &#10094;
         .main-slider--points
           .main-slider--dot(v-for='i in sliderAllCount')
-            input(type='radio', :id='[`mainSlide-` + i]', name="slide")
-            label(:for='[`mainSlide-` + i]' @click='openSlide(i)')
+            input(type='radio', :id='[`main-slide--` + i]', name="slide")
+            label(:for='[`main-slide--` + i]' @click='openSlide(i)')
         button.main-slider--next(@click='nextSlide') &#10095;
 
 block content
