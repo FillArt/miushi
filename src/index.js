@@ -19,12 +19,16 @@ const app = new Vue({
     menu: false,
     productCounter: 0,
     sliderAllCount: 0,
+
     // Номер активного слайда
     sliderActive: 1,
+
     // Отступ тела со слайдами в контейнере
     sliderOffsetLeft: 0,
+
     // Шаг одного слайда = его длина
     sliderOffsetStep: 0,
+
     // Список изображений
     sliderList: [
       {
@@ -38,7 +42,7 @@ const app = new Vue({
         img: "/assets/img/main-slider.jpg",
         title: "Счастливые часы",
         subtitle: "11:00 до 16:00 в будние дни",
-        discount: true,
+        discount: false,
         sumDiscount: 20
       },
       {
@@ -46,8 +50,8 @@ const app = new Vue({
         title: "Счастливые часы",
         subtitle: "11:00 до 16:00 в будние дни",
         discount: true,
-        sumDiscount: 125
-      }
+        sumDiscount: 99
+      },
     ]
   }),
   methods: {

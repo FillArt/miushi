@@ -14,12 +14,18 @@ block main
     .main-slider
       .slider.js-slider
         .slider__body(:style='{left: sliderOffsetLeft + "px"}')
-          .slider__slide.js-slide(v-for='slide in sliderList', :style='"background-image: url(" + slide.img + ")"')
+          .slider__slide.js-slide(v-for='slide in sliderList',
+                                  :style='"background-image: url(" + slide.img + ")"')
             .container
               .main-slider--text
-                +text-slide( '{{ slide.title }}' , '{{ slide.subtitle }}', '{{ slide.discount }}', '{{ slide.sumDiscount }}')
+                +text-slide( '{{ slide.title }}' ,
+                            '{{ slide.subtitle }}',
+                            '{{ slide.discount }}',
+                            '{{ slide.sumDiscount }}')
       .main-slider--button
         button.main-slider--prev(@click='prevSlide') &#10094;
+        .main-slider--points
+          input(type='radio', name="slide", v-for='i in sliderAllCount')
         button.main-slider--next(@click='nextSlide') &#10095;
 
 block content
