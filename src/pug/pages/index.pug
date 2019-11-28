@@ -12,12 +12,24 @@ block content
 block main
   section
     .main-slider
-      img.mySlides(src='/assets/img/main-slider.jpg')
-      img.mySlides(src='/assets/img/main-slider.jpg')
-      img.mySlides(src='/assets/img/main-slider.jpg')
-      .main-button
-        button.main-button--prev(@click='plusDivs(-1)') &#10094;
-        button.main-button--next(@click='plusDivs(+1)') &#10095;
+      .slider.js-slider
+        .slider-body(:style='{left: sliderOffsetLeft + "px"}')
+          .slider-slide.js-slide(v-for='slide in sliderList',
+                                  :style='"background-image: url(" + slide.img + ")"')
+            .container
+              span {{ sliderActive }}
+              .main-slider--text
+                +text-slide( '{{ slide.title }}'  ,
+                            '{{ slide.subtitle }}',
+                            '{{ slide.discount }}',
+                            '{{ slide.sumDiscount }}')
+      .main-slider--button
+        button.main-slider--prev(@click='prevSlide') &#10094;
+        .main-slider--points
+          .main-slider--dot(v-for='i in sliderAllCount')
+            input(type='radio', :id='[`main-slide--` + i]', name="slide")
+            label(:for='[`main-slide--` + i]', @click='openSlide(i)')
+        button.main-slider--next(@click='nextSlide') &#10095;
 
 block content
   section
@@ -28,5 +40,5 @@ block script
     const foo = true;
     let bar = function() {};
     if (foo) {
-    bar(1 + 5)
+      // code
     }

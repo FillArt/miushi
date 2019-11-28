@@ -6,7 +6,15 @@ mixin item(title, descr)
 mixin item-menu(name, boolean)
   li
     span(class=boolean ? 'header-menu--arrow': 'header-menu--item')= name
+
 mixin header-feedback(number, subtitle)
   p
     strong= number
     span= subtitle
+
+mixin text-slide(title, subtitle, boolean, discount)
+    span.main-slider--title= title
+      span.main-discount(v-if='slide.discount') скидка
+        strong= discount + ' %'
+    span.main-slider--subtitle= subtitle
+    button.main-slider--detail Подробнее
