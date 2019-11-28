@@ -6,6 +6,9 @@ $slide-width: 100%;
 	height: $slider-height;
 	position: relative;
 	overflow: hidden;
+  @media screen and (max-width: $smDesktopWidth) {
+    z-index: -1;
+  }
 	&-body {
 		min-width: auto;
 		height: $slider-height;
@@ -36,7 +39,9 @@ $slide-width: 100%;
   max-width: 1400px;
   margin: 0 auto;
   @media screen and (max-width: $smDesktopWidth) {
+    position: relative;
     grid-template-columns: 1fr;
+    z-index: 99;
   }
 }
 .main-slider--prev, .main-slider--next {
