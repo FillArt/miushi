@@ -17,7 +17,6 @@ block main
           .slider-slide.js-slide(v-for='slide in sliderList',
                                   :style='"background-image: url(" + slide.img + ")"')
             .container
-              span {{ sliderActive }}
               .main-slider--text
                 +text-slide( '{{ slide.title }}'  ,
                             '{{ slide.subtitle }}',

@@ -37,6 +37,7 @@ $slide-width: 100%;
   margin: 0 auto;
 }
 .main-slider--prev, .main-slider--next {
+  position: relative;
   cursor: pointer;
   width: 53px;
   color: $secondFontColor;

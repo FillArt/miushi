@@ -64,7 +64,6 @@ const app = new Vue({
       // Общее количество слайдов для стопов
       this.sliderAllCount = sliderSlidies.length;
     },
-
     // Открыть слайд по номеру
     openSlide(id) {
       if (id > 0 && id <= this.sliderAllCount) {
@@ -91,17 +90,19 @@ const app = new Vue({
         this.sliderActive -= 1;
         this.openSlide(this.sliderActive);
       }
-    },
-
-    checkedSlide(val){
-        console.log(val)
+    }
+  },
+  watch: {
+    sliderActive() {
+      for (let i = 1; i <= this.sliderAllCount; i++) {
+        if (this.sliderActive === i) {
+          document.getElementById([`main-slide--` + i]).checked = true;
+        }
+      }
     }
   },
   mounted() {
     this.initSlider();
-    this.checkedSlide(this.sliderActive);
-    document.getElementById("kek").checked = true;
-
     // Перенастройка слайдера при ресайзе окна
     window.addEventListener("resize", () => {
       this.initSlider();
