@@ -260,6 +260,7 @@ header {
   display: none;
   @media screen and (max-width: $smDesktopWidth) {
     display: block;
+    z-index: 99;
     position: absolute;
     left: 0;
     top: 0;
