@@ -19,17 +19,9 @@ const app = new Vue({
     menu: false,
     productCounter: 0,
     sliderAllCount: 0,
-
-    // Номер активного слайда
     sliderActive: 1,
-
-    // Отступ тела со слайдами в контейнере
     sliderOffsetLeft: 0,
-
-    // Шаг одного слайда = его длина
     sliderOffsetStep: 0,
-
-    // Список изображений
     sliderList: [
       {
         img: "/assets/img/main-slider.jpg",
@@ -51,7 +43,7 @@ const app = new Vue({
         subtitle: "11:00 до 16:00 в будние дни",
         discount: true,
         sumDiscount: 99
-      },
+      }
     ]
   }),
   methods: {
@@ -63,7 +55,7 @@ const app = new Vue({
         document.getElementById("app").classList.remove("header-menu--bg");
       }
     },
-    initSlider: function() {
+    initSlider() {
       // Получаем элементы сладера и его слайдов
       let sliderBody = this.$el.querySelector(".js-slider");
       let sliderSlidies = sliderBody.querySelectorAll(".js-slide");
@@ -74,7 +66,7 @@ const app = new Vue({
     },
 
     // Открыть слайд по номеру
-    openSlide: function(id) {
+    openSlide(id) {
       if (id > 0 && id <= this.sliderAllCount) {
         this.sliderActive = id;
         // Сдвигаем элемент со слайдами
@@ -86,7 +78,7 @@ const app = new Vue({
     },
 
     // Следующий слайд
-    nextSlide: function() {
+    nextSlide() {
       if (this.sliderActive < this.sliderAllCount) {
         this.sliderActive += 1;
         this.openSlide(this.sliderActive);
@@ -94,15 +86,21 @@ const app = new Vue({
     },
 
     // Предыдущий слайд
-    prevSlide: function() {
+    prevSlide() {
       if (this.sliderActive > 1) {
         this.sliderActive -= 1;
         this.openSlide(this.sliderActive);
       }
+    },
+
+    checkedSlide(val){
+        console.log(val)
     }
   },
   mounted() {
     this.initSlider();
+    this.checkedSlide(this.sliderActive);
+    document.getElementById("kek").checked = true;
 
     // Перенастройка слайдера при ресайзе окна
     window.addEventListener("resize", () => {
