@@ -9,11 +9,13 @@ import "./assets/scss/main.scss";
 
 // Vue.js
 window.Vue = require("vue");
+import store from "./store/index";
 // Vue components (for use in html)
 Vue.component("example-component", require("./components/Example.vue").default);
 
 // Vue init
 const app = new Vue({
+  store,
   el: "#app",
   data: () => ({
     menu: false,
@@ -99,6 +101,9 @@ const app = new Vue({
         }
       }
     }
+  },
+  created() {
+      this.title = this.$store.getters.getTitle
   },
   mounted() {
     this.initSlider();
