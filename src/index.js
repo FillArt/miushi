@@ -83,7 +83,6 @@ const app = new Vue({
         this.openSlide(this.sliderActive);
       }
     },
-
     // Предыдущий слайд
     prevSlide() {
       if (this.sliderActive > 1) {

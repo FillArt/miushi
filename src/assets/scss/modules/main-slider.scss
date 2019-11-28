@@ -35,6 +35,9 @@ $slide-width: 100%;
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
+  @media screen and (max-width: $smDesktopWidth) {
+    grid-template-columns: 1fr;
+  }
 }
 .main-slider--prev, .main-slider--next {
   position: relative;
@@ -47,6 +50,9 @@ $slide-width: 100%;
   opacity: 0.5;
   &:hover {
     opacity: 1;
+  }
+  @media screen and (max-width: $smDesktopWidth) {
+    display: none;
   }
 }
 .main-slider--next {
@@ -103,6 +109,9 @@ $slide-width: 100%;
   line-height: 40px;
   font-size: rem(29);
   border-radius: 50%;
+  @media screen and (max-width: $smDesktopWidth) {
+    right: -35%;
+  }
   strong {
     display: block;
   }
