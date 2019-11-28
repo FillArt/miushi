@@ -1,0 +1,25 @@
+.product {
+  margin: 75px 0 0 0;
+}
+.product-title {
+  position: relative;
+  font-size: rem(60);
+  text-align: center;
+  font-family: $decorFont;
+  color: $decorFontColor;
+  &:before, &:after {
+    content: ' ';
+    display: inline-block;
+    position: absolute;
+    width: 109px;
+    height: 40px;
+  }
+  &:before {
+    margin: 20px 0 0 -150px;
+    background-image: url("/assets/img/left-decor.png");
+  }
+  &:after {
+    background-image: url("/assets/img/right-decor.png");
+    margin: 20px 0 0 40px;
+  }
+}

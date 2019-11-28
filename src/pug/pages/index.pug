@@ -30,6 +30,11 @@ block main
             label(:for='[`main-slide--` + i]', @click='openSlide(i)')
         button.main-slider--next(@click='nextSlide') &#10095;
 
+block product
+  section.product
+    .container
+      h2.product-title Сеты
+
 block content
   section
     .container
