@@ -8,7 +8,9 @@ export default {
         grams: 1560,
         сalory: 1700,
         price: 2050,
-        item: 1
+        item: 1,
+        hit: true,
+        veg: false
       },
       {
         title: "Cет №8",
@@ -17,7 +19,9 @@ export default {
         grams: 950,
         сalory: 800,
         price: 1590,
-        item: 1
+        item: 1,
+        hit: false,
+        veg: false
       },
       {
         title: "Миниcет №5",
@@ -26,7 +30,9 @@ export default {
         grams: 450,
         сalory: 400,
         price: 510,
-        item: 1
+        item: 1,
+        hit: false,
+        veg: false
       },
       {
         title: "Cет №6",
@@ -35,7 +41,9 @@ export default {
         grams: 460,
         сalory: 490,
         price: 400,
-        item: 1
+        item: 1,
+        hit: false,
+        veg: true
       }
     ]
   },

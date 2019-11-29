@@ -19,8 +19,12 @@ mixin text-slide(title, subtitle, boolean, discount)
     span.main-slider--subtitle= subtitle
     button.main-slider--detail Подробнее
 
-mixin product-card(title, img, quantity, grams, сalory, price, item)
+mixin product-card(title, img, quantity, grams, сalory, price, item, hit, veg)
     .product-item--picture
+      .product-stock.product-veg(v-if="item.veg")
+        span veg
+      .product-stock.product-hit(v-if="item.hit")
+        span хит
       img(:src='item.img')
     .product-item--calc
       h3= title
