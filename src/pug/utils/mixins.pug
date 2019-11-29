@@ -19,19 +19,18 @@ mixin text-slide(title, subtitle, boolean, discount)
     span.main-slider--subtitle= subtitle
     button.main-slider--detail Подробнее
 
-mixin product-card()
-  .product-card
+mixin product-card(title, img, quantity, grams, сalory, price, item)
     .product-item--picture
-      img(src="/assets/img/set/set-10.png")
+      img(:src='item.img')
     .product-item--calc
-      h3 Сет №10
-      span 72 шт. | 1560 г. | 1700 Kkal
+      h3= title
+      span {{ item.quantity }} шт. | {{ item.grams }} г. | {{ item.сalory }} Kkal
       .product-wrapper
         .product-price
-          strong 2 050 <sup> руб.</sup>
+          strong {{ item.price }} <sup> руб.</sup>
         .product-payment
           button.product-payment--minus
-          span 1
+          span= item
           button.product-payment--plus
       button.product-item--sale
         span В корзину

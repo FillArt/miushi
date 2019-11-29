@@ -30,15 +30,19 @@ block main
             label(:for='[`main-slide--` + i]', @click='openSlide(i)')
         button.main-slider--next(@click='nextSlide') &#10095;
 
-block product
+block product-sets
   section.product
     .container
       h2.product-title {{ title[0] }}
       .product-container
-        +product-card
-        +product-card
-        +product-card
-        +product-card
+        .product-card(v-for="item in this.sets")
+          +product-card('{{ item.title }}'   ,
+                        '{{ item.img }}'     ,
+                        '{{ item.quantity }}',
+                        '{{ item.grams }}'   ,
+                        '{{ item.calory }}'  ,
+                        '{{ item.price }}'   ,
+                        '{{ item.item }}')
 
 
 block content

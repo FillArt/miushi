@@ -77,7 +77,6 @@ const app = new Vue({
         );
       }
     },
-
     // Следующий слайд
     nextSlide() {
       if (this.sliderActive < this.sliderAllCount) {
@@ -103,7 +102,8 @@ const app = new Vue({
     }
   },
   created() {
-      this.title = this.$store.getters.getTitle
+    this.title = this.$store.getters.getTitle;
+    this.sets = this.$store.getters.getSets;
   },
   mounted() {
     this.initSlider();
