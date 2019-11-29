@@ -10,6 +10,8 @@ import "./assets/scss/main.scss";
 // Vue.js
 window.Vue = require("vue");
 import store from "./store/index";
+
+import { mapActions, mapGetters } from 'vuex';
 // Vue components (for use in html)
 Vue.component("example-component", require("./components/Example.vue").default);
 
@@ -49,6 +51,7 @@ const app = new Vue({
     ]
   }),
   methods: {
+    ...mapActions(['setState', 'setStateToArray']),
     menuModal() {
       this.menu = !this.menu;
       if (this.menu) {
@@ -92,6 +95,9 @@ const app = new Vue({
       }
     }
   },
+  computed:{
+      ...mapGetters(['sets', 'title']),
+  },
   watch: {
     sliderActive() {
       for (let i = 1; i <= this.sliderAllCount; i++) {
@@ -102,8 +108,12 @@ const app = new Vue({
     }
   },
   created() {
-    this.title = this.$store.getters.getTitle;
-    this.sets = this.$store.getters.getSets;
+      console.log(this.sets);
+      this.setStateToArray({type: 'sets', index: 0, value: {
+              title: "Test",
+              price: 20000
+          }});
+      console.log(this.sets);
   },
   mounted() {
     this.initSlider();

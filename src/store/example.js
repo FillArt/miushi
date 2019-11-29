@@ -5,7 +5,7 @@ export default {
   mutations: {},
   actions: {},
   getters: {
-    getTitle(state) {
+    title(state) {
       return state.title;
     }
   }

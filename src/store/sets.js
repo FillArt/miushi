@@ -47,11 +47,33 @@ export default {
       }
     ]
   },
-  mutations: {},
-  actions: {},
+    mutations: {
+        setState(state, { type, value }) {
+            state[type] = value;
+        },
+        setStateToArray(state, { type, index, value }) {
+            for(let key in value){
+                state[type][index][key] = value[key];
+            }
+            //state[type][index] = value;
+        },
+    },
+
+    actions: {
+        setState(context, { type, value }) {
+            context.commit('setState', { type, value });
+        },
+        setStateToArray(context, { type, index, value }) {
+            context.commit('setStateToArray', { type, index, value });
+        },
+    },
+
   getters: {
-    getSets(state) {
-      return state.sets;
-    }
+      sets(state) {
+          return state.sets;
+      },
+      box(state) {
+          return state.box;
+      }
   }
 };
