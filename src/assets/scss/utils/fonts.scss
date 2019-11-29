@@ -52,3 +52,14 @@
   url("/assets/fonts/LemonTuesday/Lemontuesday.ttf") format("truetype");
   //  url('/assets/fonts/HelveticaNeueCyr/Black/HelveticaNeueCyr-Black.svg') format('svg'); /* Legacy iOS */
 }
+
+// Robobto Slab-Bold
+@font-face {
+  font-family: "Robobto Slab-Bold";
+  font-weight: 700;
+  font-style: normal;
+  src: url("/assets/fonts/OpenSans/Bold/robotoslabbold.woff");
+  src: url("/assets/fonts/OpenSans/Bold/robotoslabbold.woff2") format("woff"),
+  url("/assets/fonts/OpenSans/Bold/robotoslabbold.ttf") format("truetype");
+  //  url('/assets/fonts/HelveticaNeueCyr/Black/HelveticaNeueCyr-Black.svg') format('svg'); /* Legacy iOS */
+}

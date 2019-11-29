@@ -8,8 +8,9 @@
   padding: 0 0 50px 0;
   font-family: $decorFont;
   color: $decorFontColor;
-  &:before, &:after {
-    content: ' ';
+  &:before,
+  &:after {
+    content: " ";
     display: inline-block;
     position: absolute;
     width: 109px;
@@ -29,10 +30,101 @@
   flex-direction: column;
   background-color: $secondFontColor;
   border-radius: 10px;
-  box-shadow: 0 4px 29px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 29px rgba(0, 0, 0, 0.08);
   max-width: 265px;
   width: 100%;
 }
 .product-item--calc {
   padding: 30px 36px 36px 36px;
+  h3 {
+    text-align: center;
+    padding: 0 0 20px 0;
+    font-family: $boldFont;
+    font-size: rem(20);
+  }
+  span {
+    display: block;
+    font-size: rem(12);
+    padding: 0 0 30px 0;
+    text-align: center;
+  }
+}
+.product-wrapper {
+  display: grid;
+  font-family: $priceFont;
+  grid-template-columns: 1.6fr 1fr;
+  margin: 0 0 30px 0;
+}
+.product-price {
+  strong {
+    position: relative;
+    font-size: rem(22);
+  }
+  sup {
+    position: absolute;
+    top: rem(3);
+    right: -30px;
+    font-size: rem(12);
+    height: 100%;
+  }
+}
+.product-payment {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  justify-content: center;
+  button {
+    display: grid;
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    justify-self: center;
+    cursor: pointer;
+    border-radius: 50%;
+    &:hover {
+      box-shadow: 0px 1px 3px 0 $neutral-secondary ;
+    }
+  }
+  span {
+    font-family: $mainFont;
+    display: inline-block;
+    text-align: center;
+    padding: 0;
+    font-size: rem(14);
+  }
+}
+.product-payment--minus {
+  background-image: url("/assets/img/minus.png");
+}
+.product-payment--plus {
+  background-image: url("/assets/img/pluse.png");
+}
+.product-item--sale {
+  width: 100%;
+  cursor: pointer;
+  padding: 15px 0;
+  color: $secondFontColor;
+  background-color: $success-color;
+  border-radius: 5px;
+  &:hover {
+    box-shadow: 2px 2px 10px grey;
+  }
+  span {
+    position: relative;
+    font-size: rem(14);
+    letter-spacing: 1px;
+    font-family: $boldFont;
+    text-transform: uppercase;
+    padding: 0;
+    margin-left: -40px;
+  }
+}
+.product-item--sale span:after {
+  content: '';
+  display: inline-block;
+  width: 22px;
+  height: 20px;
+  position: absolute;
+  right: 40px;
+  background-image: url("/assets/img/cart-sale.png");
 }
