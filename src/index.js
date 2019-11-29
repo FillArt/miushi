@@ -11,7 +11,7 @@ import "./assets/scss/main.scss";
 window.Vue = require("vue");
 import store from "./store/index";
 
-import { mapActions, mapGetters } from 'vuex';
+import { mapActions, mapGetters } from "vuex";
 // Vue components (for use in html)
 Vue.component("example-component", require("./components/Example.vue").default);
 
@@ -51,7 +51,7 @@ const app = new Vue({
     ]
   }),
   methods: {
-    ...mapActions(['setState', 'setStateToArray']),
+    ...mapActions(["setState", "setStateToArray"]),
     menuModal() {
       this.menu = !this.menu;
       if (this.menu) {
@@ -60,6 +60,7 @@ const app = new Vue({
         document.getElementById("app").classList.remove("header-menu--bg");
       }
     },
+    //Slider ------------------------------------------
     initSlider() {
       // Получаем элементы сладера и его слайдов
       let sliderBody = this.$el.querySelector(".js-slider");
@@ -93,10 +94,11 @@ const app = new Vue({
         this.sliderActive -= 1;
         this.openSlide(this.sliderActive);
       }
-    }
+    },
+    //---------------------------------------------------
   },
-  computed:{
-      ...mapGetters(['sets', 'title']),
+  computed: {
+    ...mapGetters(["sets", "title"])
   },
   watch: {
     sliderActive() {
@@ -108,12 +110,14 @@ const app = new Vue({
     }
   },
   created() {
-      console.log(this.sets);
-      this.setStateToArray({type: 'sets', index: 0, value: {
-              title: "Test",
-              price: 20000
-          }});
-      console.log(this.sets);
+    /*this.setStateToArray({
+      type: "sets",
+      index: 0,
+      value: {
+        title: "Test",
+        price: 20000
+      }
+    }); */
   },
   mounted() {
     this.initSlider();
