@@ -34,7 +34,7 @@ mixin product-card(title, img, quantity, grams, сalory, price, item, hit, veg)
           strong {{ item.price * item.item }} <sup> руб.</sup>
         .product-payment
           button.product-payment--minus(@click="item.item -= item.item - 1 === 0 ? 0 : 1")
-          span= item
+          span {{ item.item }}
           button.product-payment--plus(@click="item.item += 1")
       button.product-item--sale
         span В корзину
