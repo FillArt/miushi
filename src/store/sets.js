@@ -53,7 +53,7 @@ export default {
         сalory: 1700,
         price: 2050,
         item: 1,
-        hit: true,
+        hit: false,
         veg: false
       },
       {
@@ -64,7 +64,7 @@ export default {
         сalory: 800,
         price: 1590,
         item: 1,
-        hit: false,
+        hit: true,
         veg: false
       },
       {
@@ -108,7 +108,7 @@ export default {
         сalory: 800,
         price: 1590,
         item: 1,
-        hit: false,
+        hit: true,
         veg: false
       },
       {
@@ -119,7 +119,7 @@ export default {
         сalory: 400,
         price: 510,
         item: 1,
-        hit: false,
+        hit: true,
         veg: false
       },
       {
@@ -130,8 +130,8 @@ export default {
         сalory: 490,
         price: 400,
         item: 1,
-        hit: false,
-        veg: true
+        hit: true,
+        veg: false
       },
       {
         title: "Cет №10",
@@ -141,8 +141,8 @@ export default {
         сalory: 1700,
         price: 2050,
         item: 1,
-        hit: true,
-        veg: false
+        hit: false,
+        veg: true
       },
       {
         title: "Cет №8",
@@ -153,7 +153,7 @@ export default {
         price: 1590,
         item: 1,
         hit: false,
-        veg: false
+        veg: true
       },
       {
         title: "Миниcет №5",
@@ -164,7 +164,7 @@ export default {
         price: 510,
         item: 1,
         hit: false,
-        veg: false
+        veg: true
       },
       {
         title: "Cет №6",

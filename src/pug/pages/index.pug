@@ -35,14 +35,14 @@ block product-sets
     .container
       .glider-contain.multiple
         h2.product-title {{ title[0] }}
-        button.glider-prev <
-        .glider.product-container
-          .slide(v-for="item in this.sets")
+        .glider
+          .product-slide(v-for="item in this.sets")
             .product-card
-              +product-card('{{ item.title }}')
-        button.glider-next >
-
-        #dots.glider-dots
+              +product-card
+        .product-control
+          button.glider-prev <
+          #dots.glider-dots
+          button.glider-next >
 
 
 
