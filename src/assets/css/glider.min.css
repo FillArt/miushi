@@ -71,7 +71,6 @@
 
 .glider-next,
 .glider-prev {
-	position: absolute;
 	background: 0 0;
 	z-index: 2;
 	font-size: 40px;
@@ -84,7 +83,11 @@
 	line-height: 1;
 	transition: opacity .5s cubic-bezier(.17, .67, .83, .67), color .5s cubic-bezier(.17, .67, .83, .67)
 }
-
+.glider-next {
+    outline: 1px solid red;
+    width: 20px;
+    justify-content: end;
+}
 .glider-next:focus,
 .glider-next:hover,
 .glider-prev:focus,
@@ -113,14 +116,15 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	margin: 35px 0 auto;
+	margin: 0 auto;
 	padding: 0
 }
 
 .glider-dot {
 	display: block;
 	cursor: pointer;
-	color:#b2b2b2;
+    color:#b2b2b2;
+    align-self: center;
 	border-radius: 999px;
 	background:#b2b2b2;
 	width: 8px;
