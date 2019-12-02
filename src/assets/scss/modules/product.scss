@@ -39,6 +39,9 @@
   max-width: 265px;
   margin: 20px 10px 20px 10px;
   width: 100%;
+  @media screen and (max-width: $smDesktopWidth) {
+    max-width: 240px;
+  }
 }
 .product-item--calc {
   padding: 30px 36px 36px 36px;
@@ -53,6 +56,15 @@
     font-size: rem(12);
     padding: 0 0 30px 0;
     text-align: center;
+  }
+  @media screen and (max-width: $smDesktopWidth) {
+    padding: 15px 15px 30px 15px;
+    h3 {
+      padding: 0 0 15px 0;
+    }
+    span {
+      padding: 0 0 20px 0;
+    }
   }
 }
 .product-item--sale {
@@ -74,6 +86,12 @@
     padding: 0;
     margin-left: -40px;
   }
+  @media screen and (max-width: $smDesktopWidth) {
+    padding: 10px 0;
+    span {
+      padding: 0;
+    }
+  }
 }
 .product-item--sale span:after {
   content: '';
@@ -89,6 +107,9 @@
   font-family: $priceFont;
   grid-template-columns: 1.6fr 1fr;
   margin: 0 0 30px 0;
+  @media screen and (max-width: $smDesktopWidth) {
+    margin: 0 0 20px 0;
+  }
 }
 .product-price {
   strong {
@@ -119,6 +140,11 @@
     &:hover {
       box-shadow: 0px 1px 3px 0 $neutral-secondary ;
     }
+    @media screen and (max-width: $smDesktopWidth) {
+      span {
+        padding: 0;
+      }
+    }
   }
   span {
     font-family: $mainFont;
@@ -126,6 +152,9 @@
     text-align: center;
     padding: 0;
     font-size: rem(14);
+    @media screen and (max-width: $smDesktopWidth) {
+      padding: 0;
+    }
   }
 }
 .product-payment--minus {
@@ -141,6 +170,9 @@
   border-radius: 10px 10px 0 0;
   img {
     height: 100%;
+  }
+  @media screen and (max-width: $smDesktopWidth) {
+    max-height: 216px;
   }
 }
 .product-stock {
