@@ -168,5 +168,6 @@
   background-image: linear-gradient(0deg, #d34333 0%, #f75b49 100%);
 }
 .product-control {
-  
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
 }

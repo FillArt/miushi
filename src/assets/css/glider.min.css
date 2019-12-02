@@ -76,17 +76,16 @@
 	font-size: 40px;
 	text-decoration: none;
 	left: -23px;
-	top: 30%;
+	//top: 30%;
 	cursor: pointer;
 	color: #666;
 	opacity: 1;
 	line-height: 1;
 	transition: opacity .5s cubic-bezier(.17, .67, .83, .67), color .5s cubic-bezier(.17, .67, .83, .67)
 }
-.glider-next {
-    outline: 1px solid red;
-    width: 20px;
-    justify-content: end;
+.glider-next {}
+.glider-prev {
+    transform: rotate(180deg);
 }
 .glider-next:focus,
 .glider-next:hover,
@@ -99,7 +98,10 @@
 	right: -23px;
 	left: auto
 }
-
+.glider-next img,
+.glider-prev img {
+    display: grid;
+}
 .glider-next.disabled,
 .glider-prev.disabled {
 	opacity: .25;
