@@ -41,8 +41,6 @@
   width: 100%;
   @media screen and (max-width: $smDesktopWidth) {
     max-width: 240px;
-  }
-  @media screen and (max-width: $tableWidth) {
     margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 20px;
