@@ -42,6 +42,11 @@
   @media screen and (max-width: $smDesktopWidth) {
     max-width: 240px;
   }
+  @media screen and (max-width: $tableWidth) {
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 }
 .product-item--calc {
   padding: 30px 36px 36px 36px;
@@ -202,4 +207,8 @@
 .product-control {
   display: grid;
   grid-template-columns: 2fr 1fr 2fr;
+  @media screen and (max-width: $tableWidth) {
+    grid-template-columns: 1fr;
+
+  }
 }
