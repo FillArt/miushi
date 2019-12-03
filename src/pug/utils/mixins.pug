@@ -30,7 +30,7 @@ mixin product-card(title, img, quantity, grams, сalory, price, item, hit, veg)
       img(:src='item.img')
     .product-item--calc
       h3 {{ item.title }}
-      span {{ item.quantity * item.item }} шт. | {{ item.grams * item.item }} г. | {{ item.сalory * item.item }} Kkal
+      span {{ item.quantity * item.item }} {{ item.type }} | {{ item.grams * item.item }} г. | {{ item.сalory * item.item }} Kkal
       .product-wrapper
         .product-price
           strong {{ item.price * item.item }} <sup> руб.</sup>

@@ -108,7 +108,7 @@ const app = new Vue({
     //---------------------------------------------------
   },
   computed: {
-    ...mapGetters(["sets", "rolls", "title"])
+    ...mapGetters(["sets", "rolls", "pizza", "title"])
   },
   watch: {
     sliderActive() {
