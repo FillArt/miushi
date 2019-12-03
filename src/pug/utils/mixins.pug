@@ -60,13 +60,13 @@ mixin product-wok()
         .product-quantity--text
           span Добавить:
         .product-quantity--number
-          span + 2
-          button x
+          span + {{ item.itemMore }}
+          button(@click="item.itemMore = 1") x
       .product-cost
         .product-cost--price
-          span 140 <sup>руб</sup>
+          span {{ item.priceMore * item.itemMore }} <sup>руб</sup>
         .product-cost--add
-          button +
+          button(@click="item.itemMore += 1") +
 
     .product-wrapper
       .product-price

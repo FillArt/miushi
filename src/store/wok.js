@@ -9,6 +9,8 @@ export default {
         сalory: 1350,
         price: 430,
         item: 1,
+        itemMore: 1,
+        priceMore: 70,
         hit: false,
         veg: false,
         hot: false
@@ -21,6 +23,8 @@ export default {
         сalory: 1350,
         price: 290,
         item: 1,
+        itemMore: 1,
+        priceMore: 70,
         hit: false,
         veg: false,
         hot: false
@@ -33,6 +37,8 @@ export default {
         сalory: 1350,
         price: 430,
         item: 1,
+        itemMore: 1,
+        priceMore: 70,
         hit: false,
         veg: false,
         hot: false
@@ -45,6 +51,8 @@ export default {
         сalory: 1350,
         price: 430,
         item: 1,
+        itemMore: 1,
+        priceMore: 70,
         hit: false,
         veg: false,
         hot: false
