@@ -52,7 +52,7 @@ mixin product-wok()
     img(:src='item.img', style="height: 200px; padding: 35px 0 0 0 ")
   .product-item--calc
     h3 {{ item.title }}
-    span {{ item.grams * item.item }} г. | {{ item.сalory * item.item }} Kkal
+    span.wok {{ item.grams * item.item }} г. | {{ item.сalory * item.item }} Kkal
 
 
     .product-additive
@@ -61,11 +61,12 @@ mixin product-wok()
           span Добавить:
         .product-quantity--number
           span + 2
+          button x
       .product-cost
         .product-cost--price
           span 140 <sup>руб</sup>
         .product-cost--add
-          span +
+          button +
 
     .product-wrapper
       .product-price
