@@ -35,16 +35,48 @@ block product-sets
     .container
       .glider-contain.multiple
         h2.product-title {{ title[0] }}
-        .glider
+        .glider.set
           .product-slide(v-for="item in this.sets")
             .product-card
               +product-card
         .product-control
           button.glider-prev
             img(src='/assets/img/product-arrow.png')
-          #dots.glider-dots
+          #dots-set.glider-dots
           button.glider-next
             img(src='/assets/img/product-arrow.png')
+
+block product-rolls
+  section.product
+    .container
+      .glider-contain.multiple
+        h2.product-title {{ title[1] }}
+        .glider.rolls
+          .product-slide(v-for="item in this.sets")
+            .product-card
+              +product-card
+        .product-control
+          button.glider-prev.rolls
+            img(src='/assets/img/product-arrow.png')
+          #dots-rolls.glider-dots
+          button.glider-next.rolls
+            img(src='/assets/img/product-arrow.png')
+
+  block product-rolls
+    section.product
+      .container
+        .glider-contain.multiple
+          h2.product-title {{ title[2] }}
+          .glider.pizza
+            .product-slide(v-for="item in this.sets")
+              .product-card
+                +product-card
+          .product-control
+            button.glider-prev.pizza
+              img(src='/assets/img/product-arrow.png')
+            #dots-pizza.glider-dots
+            button.glider-next.pizza
+              img(src='/assets/img/product-arrow.png')
 
 
 
