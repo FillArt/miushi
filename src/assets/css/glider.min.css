@@ -149,6 +149,11 @@
     display: none;
   }
 }
+@media screen and (max-width: 501px){
+    .glider {
+        overflow-x: hidden;
+    }
+}
 @media (max-width: 36em) {
   .glider::-webkit-scrollbar {
     opacity: 1;

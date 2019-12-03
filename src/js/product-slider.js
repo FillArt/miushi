@@ -23,7 +23,11 @@ window.addEventListener("load", function() {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
-          itemWidth: 150
+          itemWidth: 150,
+          draggable: true,
+          scrollLock: false,
+          dots: "#dots",
+          rewind: false
         }
       },
       {
@@ -31,7 +35,23 @@ window.addEventListener("load", function() {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          itemWidth: 150
+          itemWidth: 150,
+          draggable: true,
+          scrollLock: false,
+          dots: "#dots",
+          rewind: false
+        }
+      },
+      {
+        breakpoint: 320,
+        settings: {
+          slidesToShow: 1.5,
+          slidesToScroll: 1,
+          itemWidth: 150,
+          draggable: true,
+          scrollLock: false,
+          dots: null,
+          rewind: false
         }
       }
     ]

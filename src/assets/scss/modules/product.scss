@@ -24,6 +24,12 @@
     background-image: url("/assets/img/right-decor.png");
     margin: 20px 0 0 40px;
   }
+  @media screen and (max-width: $phoneWidth) {
+    padding: 0;
+    &:before, &:after {
+      display: none;
+    }
+  }
 }
 .product-container {
   display: flex;
@@ -206,6 +212,13 @@
   grid-template-columns: 2fr 1fr 2fr;
   @media screen and (max-width: $tableWidth) {
     grid-template-columns: 1fr;
-
   }
+}
+.product-slide {
+  @media screen and (max-width: $phoneWidth) {
+    opacity: 0.5;
+  }
+}
+.product-slide.active {
+  opacity: 1;
 }
