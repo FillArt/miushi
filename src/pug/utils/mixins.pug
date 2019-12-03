@@ -25,6 +25,8 @@ mixin product-card(title, img, quantity, grams, сalory, price, item, hit, veg)
         span veg
       .product-stock.product-hit(v-if="item.hit")
         span хит
+      .product-stock.product-hit(v-if="item.hot")
+        img(src="/assets/img/fire.png", style="height: 30px; width: 23px; margin-top: 10px;")
       img(:src='item.img')
     .product-item--calc
       h3 {{ item.title }}

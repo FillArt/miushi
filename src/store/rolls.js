@@ -9,8 +9,9 @@ export default {
                 сalory: 350,
                 price: 260,
                 item: 1,
-                hit: true,
-                veg: false
+                hit: false,
+                veg: false,
+                hot: false
             },
             {
                 title: "Унаги диру",
@@ -21,7 +22,8 @@ export default {
                 price: 280,
                 item: 1,
                 hit: false,
-                veg: false
+                veg: false,
+                hot: true,
             },
             {
                 title: "Филадельфия",
@@ -32,7 +34,8 @@ export default {
                 price: 400,
                 item: 1,
                 hit: false,
-                veg: false
+                veg: false,
+                hot: false
             },
             {
                 title: "Мексиканский",
@@ -43,7 +46,8 @@ export default {
                 price: 290,
                 item: 1,
                 hit: false,
-                veg: true
+                veg: false,
+                hot: false
             },
             {
                 title: "Кунсей батакон",
@@ -54,7 +58,8 @@ export default {
                 price: 260,
                 item: 1,
                 hit: true,
-                veg: false
+                veg: false,
+                hot: true,
             },
             {
                 title: "Унаги диру",
@@ -65,7 +70,8 @@ export default {
                 price: 280,
                 item: 1,
                 hit: false,
-                veg: false
+                veg: false,
+                hot: false,
             },
             {
                 title: "Филадельфия",
@@ -76,7 +82,8 @@ export default {
                 price: 400,
                 item: 1,
                 hit: false,
-                veg: false
+                veg: false,
+                hot: true,
             },
             {
                 title: "Мексиканский",
@@ -87,7 +94,8 @@ export default {
                 price: 290,
                 item: 1,
                 hit: false,
-                veg: true
+                veg: false,
+                hot: false
             },
             {
                 title: "Кунсей батакон",
@@ -97,8 +105,9 @@ export default {
                 сalory: 350,
                 price: 260,
                 item: 1,
-                hit: true,
-                veg: false
+                hit: false,
+                veg: false,
+                hot: false,
             },
             {
                 title: "Унаги диру",
@@ -109,7 +118,8 @@ export default {
                 price: 280,
                 item: 1,
                 hit: false,
-                veg: false
+                veg: false,
+                hot: true,
             },
             {
                 title: "Филадельфия",
@@ -120,7 +130,8 @@ export default {
                 price: 400,
                 item: 1,
                 hit: false,
-                veg: false
+                veg: false,
+                hot: false,
             },
             {
                 title: "Мексиканский",
@@ -131,7 +142,8 @@ export default {
                 price: 290,
                 item: 1,
                 hit: false,
-                veg: true
+                veg: true,
+                hot: true,
             },
             {
                 title: "Кунсей батакон",
@@ -141,8 +153,9 @@ export default {
                 сalory: 350,
                 price: 260,
                 item: 1,
-                hit: true,
-                veg: false
+                hit: false,
+                veg: false,
+                hot: true
             },
             {
                 title: "Унаги диру",
@@ -153,7 +166,8 @@ export default {
                 price: 280,
                 item: 1,
                 hit: false,
-                veg: false
+                veg: false,
+                hot: true,
             },
             {
                 title: "Филадельфия",
@@ -164,18 +178,20 @@ export default {
                 price: 400,
                 item: 1,
                 hit: false,
-                veg: false
+                veg: false,
+                hot: true,
             },
             {
                 title: "Мексиканский",
-                img: "/assets/img/rolls/rolls-4.png",
+                img: "/assets/img/rolls/rolls-5.png",
                 quantity: 8,
                 grams: 460,
                 сalory: 490,
                 price: 290,
                 item: 1,
                 hit: false,
-                veg: true
+                veg: false,
+                hot: true,
             },
         ]
     },
