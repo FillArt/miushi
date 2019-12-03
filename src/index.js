@@ -1,11 +1,13 @@
 // JS
 import "./js/";
+import "./js/glider.min"
+import "./js/product-slider"
 
 // SCSS
 import "./assets/scss/main.scss";
 
 // CSS (example)
-// import './assets/css/main.css'
+import './assets/css/glider.min.css'
 
 // Vue.js
 window.Vue = require("vue");
@@ -49,6 +51,8 @@ const app = new Vue({
         sumDiscount: 99
       }
     ]
+    //---------------------
+
   }),
   methods: {
     ...mapActions(["setState", "setStateToArray"]),
@@ -60,7 +64,7 @@ const app = new Vue({
         document.getElementById("app").classList.remove("header-menu--bg");
       }
     },
-    //Slider ------------------------------------------
+    //Main-Slider ---------------------------------------
     initSlider() {
       // Получаем элементы сладера и его слайдов
       let sliderBody = this.$el.querySelector(".js-slider");
@@ -95,6 +99,12 @@ const app = new Vue({
         this.openSlide(this.sliderActive);
       }
     },
+    //---------------------------------------------------
+
+    //Testing-Product-Slider ----------------------------
+
+
+
     //---------------------------------------------------
   },
   computed: {

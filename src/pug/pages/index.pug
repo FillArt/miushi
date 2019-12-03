@@ -33,24 +33,27 @@ block main
 block product-sets
   section.product
     .container
-      h2.product-title {{ title[0] }}
-      .product-container
-        .product-card(v-for="item in this.sets")
-          +product-card('{{ item.title }}'   ,
-                        '{{ item.img }}'     ,
-                        '{{ item.quantity }}',
-                        '{{ item.grams }}'   ,
-                        '{{ item.calory }}'  ,
-                        '{{ item.price }}'   ,
-                        '{{ item.item }}'    ,
-                        '{{ item.hit }}'     ,
-                        '{{ item.veg }}')
+      .glider-contain.multiple
+        h2.product-title {{ title[0] }}
+        .glider
+          .product-slide(v-for="item in this.sets")
+            .product-card
+              +product-card
+        .product-control
+          button.glider-prev
+            img(src='/assets/img/product-arrow.png')
+          #dots.glider-dots
+          button.glider-next
+            img(src='/assets/img/product-arrow.png')
 
 
 
 block content
   section
     .container
+      .glider-contain.multiple
+        h1 User Testing
+
 
 block script
   script(type='text/javascript').

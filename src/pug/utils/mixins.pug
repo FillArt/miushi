@@ -27,14 +27,14 @@ mixin product-card(title, img, quantity, grams, сalory, price, item, hit, veg)
         span хит
       img(:src='item.img')
     .product-item--calc
-      h3= title
+      h3 {{ item.title }}
       span {{ item.quantity * item.item }} шт. | {{ item.grams * item.item }} г. | {{ item.сalory * item.item }} Kkal
       .product-wrapper
         .product-price
           strong {{ item.price * item.item }} <sup> руб.</sup>
         .product-payment
           button.product-payment--minus(@click="item.item -= item.item - 1 === 0 ? 0 : 1")
-          span= item
+          span {{ item.item }}
           button.product-payment--plus(@click="item.item += 1")
       button.product-item--sale
         span В корзину
