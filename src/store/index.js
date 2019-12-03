@@ -5,10 +5,12 @@ Vue.use(Vuex);
 
 import example from "./example";
 import sets from "./sets";
+import rolls from "./rolls";
 
 export default new Vuex.Store({
   modules: {
     example,
-    sets
+    sets,
+    rolls
   }
 });

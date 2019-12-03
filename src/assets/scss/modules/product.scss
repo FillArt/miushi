@@ -177,6 +177,8 @@
   overflow: hidden;
   border-radius: 10px 10px 0 0;
   img {
+    display: block;
+    margin: 0 auto;
     height: 100%;
   }
   @media screen and (max-width: $smDesktopWidth) {

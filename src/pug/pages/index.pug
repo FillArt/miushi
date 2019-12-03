@@ -52,7 +52,7 @@ block product-rolls
       .glider-contain.multiple
         h2.product-title {{ title[1] }}
         .glider.rolls
-          .product-slide(v-for="item in this.sets")
+          .product-slide(v-for="item in this.rolls")
             .product-card
               +product-card
         .product-control
@@ -62,7 +62,7 @@ block product-rolls
           button.glider-next.rolls
             img(src='/assets/img/product-arrow.png')
 
-  block product-rolls
+  block product-pizza
     section.product
       .container
         .glider-contain.multiple
