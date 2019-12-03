@@ -1,13 +1,13 @@
 // JS
 import "./js/";
-import "./js/glider.min"
-import "./js/product-slider"
+import "./js/glider.min";
+import "./js/product-slider";
 
 // SCSS
 import "./assets/scss/main.scss";
 
 // CSS (example)
-import './assets/css/glider.min.css'
+import "./assets/css/glider.min.css";
 
 // Vue.js
 window.Vue = require("vue");
@@ -52,7 +52,6 @@ const app = new Vue({
       }
     ]
     //---------------------
-
   }),
   methods: {
     ...mapActions(["setState", "setStateToArray"]),
@@ -98,17 +97,15 @@ const app = new Vue({
         this.sliderActive -= 1;
         this.openSlide(this.sliderActive);
       }
-    },
+    }
     //---------------------------------------------------
 
     //Testing-Product-Slider ----------------------------
 
-
-
     //---------------------------------------------------
   },
   computed: {
-    ...mapGetters(["sets", "rolls", "pizza", "title"])
+    ...mapGetters(["sets", "rolls", "pizza", "wok", "title"])
   },
   watch: {
     sliderActive() {

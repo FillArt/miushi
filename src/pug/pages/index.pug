@@ -62,21 +62,37 @@ block product-rolls
           button.glider-next.rolls
             img(src='/assets/img/product-arrow.png')
 
-  block product-pizza
-    section.product
-      .container
-        .glider-contain.multiple
-          h2.product-title {{ title[2] }}
-          .glider.pizza
-            .product-slide(v-for="item in this.pizza")
-              .product-card
-                +product-card
-          .product-control
-            button.glider-prev.pizza
-              img(src='/assets/img/product-arrow.png')
-            #dots-pizza.glider-dots
-            button.glider-next.pizza
-              img(src='/assets/img/product-arrow.png')
+block product-pizza
+  section.product
+    .container
+      .glider-contain.multiple
+        h2.product-title {{ title[2] }}
+        .glider.pizza
+          .product-slide(v-for="item in this.pizza")
+            .product-card
+              +product-card
+        .product-control
+          button.glider-prev.pizza
+            img(src='/assets/img/product-arrow.png')
+          #dots-pizza.glider-dots
+          button.glider-next.pizza
+            img(src='/assets/img/product-arrow.png')
+
+block product-wok
+  section.product
+    .container
+      .glider-contain.multiple
+        h2.product-title {{ title[3] }}
+        .glider.wok
+          .product-slide(v-for="item in this.wok")
+            .product-card
+              +product-wok
+        .product-control
+          button.glider-prev.wok
+            img(src='/assets/img/product-arrow.png')
+          #dots-wok.glider-dots
+          button.glider-next.wok
+            img(src='/assets/img/product-arrow.png')
 
 
 

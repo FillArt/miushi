@@ -19,7 +19,7 @@ mixin text-slide(title, subtitle, boolean, discount)
     span.main-slider--subtitle= subtitle
     button.main-slider--detail Подробнее
 
-mixin product-card(title, img, quantity, grams, сalory, price, item, hit, veg)
+mixin product-card()
     .product-item--picture
       .product-stock.product-veg(v-if="item.veg")
         span veg
@@ -40,3 +40,39 @@ mixin product-card(title, img, quantity, grams, сalory, price, item, hit, veg)
           button.product-payment--plus(@click="item.item += 1")
       button.product-item--sale
         span В корзину
+
+mixin product-wok()
+  .product-item--picture
+    .product-stock.product-veg(v-if="item.veg")
+      span veg
+    .product-stock.product-hit(v-if="item.hit")
+      span хит
+    .product-stock.product-hit(v-if="item.hot")
+      img(src="/assets/img/fire.png", style="height: 30px; width: 23px; margin-top: 10px;")
+    img(:src='item.img', style="height: 200px; padding: 35px 0 0 0 ")
+  .product-item--calc
+    h3 {{ item.title }}
+    span {{ item.grams * item.item }} г. | {{ item.сalory * item.item }} Kkal
+
+
+    .product-additive
+      .product-quantity
+        .product-quantity--text
+          span Добавить:
+        .product-quantity--number
+          span + 2
+      .product-cost
+        .product-cost--price
+          span 140 <sup>руб</sup>
+        .product-cost--add
+          span +
+
+    .product-wrapper
+      .product-price
+        strong {{ item.price * item.item }} <sup> руб.</sup>
+      .product-payment
+        button.product-payment--minus(@click="item.item -= item.item - 1 === 0 ? 0 : 1")
+        span {{ item.item }}
+        button.product-payment--plus(@click="item.item += 1")
+    button.product-item--sale
+      span В корзину

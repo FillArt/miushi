@@ -19,9 +19,11 @@
   &:before {
     margin: 20px 0 0 -150px;
     background-image: url("/assets/img/left-decor.png");
+    background-repeat: no-repeat;
   }
   &:after {
     background-image: url("/assets/img/right-decor.png");
+    background-repeat: no-repeat;
     margin: 20px 0 0 40px;
   }
   @media screen and (max-width: $phoneWidth) {
@@ -57,7 +59,7 @@
     text-align: center;
     padding: 0 0 20px 0;
     font-family: $boldFont;
-    font-size: rem(20);
+    font-size: rem(19);
   }
   span {
     display: block;
@@ -223,4 +225,59 @@
 }
 .product-slide.active {
   opacity: 1;
+}
+
+.product-additive {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr;
+  span {
+    padding: 0;
+  }
+}
+.product-quantity {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 4px 0 0;
+}
+.product-quantity--text {
+  font-size: rem(12);
+}
+.product-quantity--number {
+  background-color: $form-color;
+  border-radius: 3px;
+  margin-top: -2px;
+  span {
+    padding: 2px 15px 2px 5px;
+  }
+}
+
+.product-cost {
+  display: flex;
+  justify-content: center;
+}
+.product-cost--price {
+  span {
+    position: relative;
+    font-size: rem(12);
+  }
+  sup {
+    position: absolute;
+    top: -1px;
+    right: -15px;
+    font-size: rem(8);
+  }
+}
+.product-cost--add {
+  cursor: pointer;
+  margin-left: auto;
+  border-radius: 3px;
+  background-color: $success-color;
+  width: 19px;
+  &:hover {
+    box-shadow: 2px 2px 3px grey;
+  }
+  span {
+    color: $secondFontColor ;
+    font-size: rem(14);
+  }
 }

@@ -7,12 +7,14 @@ import example from "./example";
 import sets from "./sets";
 import rolls from "./rolls";
 import pizza from "./pizza";
+import wok from "./wok";
 
 export default new Vuex.Store({
   modules: {
     example,
     sets,
     rolls,
-    pizza
+    pizza,
+    wok
   }
 });
