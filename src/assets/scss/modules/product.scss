@@ -28,7 +28,8 @@
   }
   @media screen and (max-width: $phoneWidth) {
     padding: 0;
-    &:before, &:after {
+    &:before,
+    &:after {
       display: none;
     }
   }
@@ -80,6 +81,11 @@
     }
   }
 }
+.product-cost--option {
+  @media screen and (max-width: $smDesktopWidth) {
+    padding: 0 0 20px 0 !important;
+  }
+}
 .product-item--sale {
   width: 100%;
   cursor: pointer;
@@ -107,7 +113,7 @@
   }
 }
 .product-item--sale span:after {
-  content: '';
+  content: "";
   display: inline-block;
   width: 22px;
   height: 20px;
@@ -151,7 +157,7 @@
     cursor: pointer;
     border-radius: 50%;
     &:hover {
-      box-shadow: 0px 1px 3px 0 $neutral-secondary ;
+      box-shadow: 0px 1px 3px 0 $neutral-secondary;
     }
     @media screen and (max-width: $smDesktopWidth) {
       span {
@@ -198,14 +204,14 @@
   width: 54px;
   height: 54px;
   border-radius: 50%;
-  box-shadow: 0 7px 10px rgba(0,0,0,0.39);
+  box-shadow: 0 7px 10px rgba(0, 0, 0, 0.39);
   span {
     display: inherit;
     justify-self: center;
     align-self: center;
     color: $secondFontColor;
     font-family: $boldFont;
-    font-size: rem(16)
+    font-size: rem(16);
   }
 }
 .product-veg {
@@ -267,8 +273,6 @@
     }
   }
 }
-
-
 .product-cost {
   display: flex;
   justify-content: center;
@@ -292,10 +296,44 @@
     border-radius: 3px;
     cursor: pointer;
     background-color: $success-color;
-    color: $secondFontColor ;
+    color: $secondFontColor;
     font-size: rem(14);
     &:hover {
       box-shadow: 0 0 3px grey;
     }
   }
 }
+
+.product-sauce {
+  padding: 0 0 15px 0;
+}
+.product-sauce--list {
+  position: relative;
+  width: 100%;
+  border-radius: 3px;
+  background-color: $form-color;
+  cursor: pointer;
+  font-size: rem(12);
+  padding: 5px 0 5px 13px;
+  button {
+    display: grid;
+    position: absolute;
+    align-items: center;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 25px;
+    border-radius: 3px;
+    background-image: linear-gradient(0deg, #d8d8d8 0%, #f9f9f9 100%);
+    border: 1px solid #e5e5e5;
+    span {
+      display: block;
+      margin-top: -4px;
+      font-size: rem(15);
+      padding: 0 !important;
+    }
+  }
+}
+
+//---------------------------------
