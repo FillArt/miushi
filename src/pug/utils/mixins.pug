@@ -53,8 +53,6 @@ mixin product-wok()
   .product-item--calc
     h3 {{ item.title }}
     span.wok {{ item.grams * item.item }} г. | {{ item.сalory * item.item }} Kkal
-
-
     .product-additive
       .product-quantity
         .product-quantity--text
@@ -71,8 +69,13 @@ mixin product-wok()
     .product-sauce
       .product-sauce--list
         h5 Китайский соус
-        button
+        button(@click="item.submenu = !item.submenu")
           span &#8964;
+      .product-sauce--submenu(v-show="item.submenu")
+        span Мексиканский соус
+        span Японский соус
+        span Корейский соус
+
 
     .product-wrapper
       .product-price
