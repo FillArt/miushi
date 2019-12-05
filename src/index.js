@@ -23,6 +23,7 @@ const app = new Vue({
   el: "#app",
   data: () => ({
     menu: false,
+    styleButton: true,
     productCounter: 0,
     sliderAllCount: 0,
     sliderActive: 1,

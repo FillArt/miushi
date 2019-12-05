@@ -97,6 +97,10 @@ block product-wok
 block stock
   section.stock-wrapper
     .container
+      .stock-buttons
+        button(:class="styleButton ? 'active' : 'passively' ", @click="styleButton = !styleButton") Новинки
+        button(:class="styleButton ? 'passively' : 'active' ", @click="styleButton = !styleButton") Акции
+
       .glider-contain.multiple
         .glider.stock
           .product-slide(v-for="item in this.wok")
