@@ -337,13 +337,14 @@
 }
 .product-sauce--submenu {
   position: absolute;
+  border-top: 1px solid $border-base;
   z-index: 9;
   width: 100%;
   padding: 5px 0 5px 13px;
   background-color: $form-color;
   font-size: rem(12);
   span {
-    padding: 0 0 8px 0;
+    padding: 0 0 8px 0 !important;
     text-align: left;
     cursor: pointer;
     &:hover {

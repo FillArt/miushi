@@ -65,18 +65,16 @@ mixin product-wok()
           span {{ item.priceMore * item.itemMore }} <sup>руб</sup>
         .product-cost--add
           button(@click="item.itemMore += 1") +
-
     .product-sauce
       .product-sauce--list
-        h5 Китайский соус
+        h5 {{ item.itemSubmenu }}
         button(@click="item.submenu = !item.submenu")
           span &#8964;
       .product-sauce--submenu(v-show="item.submenu")
-        span Мексиканский соус
-        span Японский соус
-        span Корейский соус
-
-
+        span(@click="item.itemSubmenu = item.listSubmenu.one, item.submenu = !item.submenu") {{ item.listSubmenu.one }}
+        span(@click="item.itemSubmenu = item.listSubmenu.second, item.submenu = !item.submenu") {{ item.listSubmenu.second }}
+        span(@click="item.itemSubmenu = item.listSubmenu.third, item.submenu = !item.submenu") {{ item.listSubmenu.third }}
+        span(@click="item.itemSubmenu = item.listSubmenu.fourth, item.submenu = !item.submenu") {{ item.listSubmenu.fourth }}
     .product-wrapper
       .product-price
         strong {{ item.price * item.item + item.priceMore * item.itemMore }} <sup> руб.</sup>
