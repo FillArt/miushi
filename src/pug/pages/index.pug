@@ -98,14 +98,16 @@ block stock
   section.stock-wrapper
     .container
       .stock-buttons
-        button(:class="styleButton ? 'active' : 'passively' ", @click="styleButton = !styleButton") Новинки
-        button(:class="styleButton ? 'passively' : 'active' ", @click="styleButton = !styleButton") Акции
+        button(:class="styleButton ? 'active' : 'passively' ",
+                @click="styleButton = !styleButton, stockStyle = true") Новинки
+        button(:class="styleButton ? 'passively' : 'active' ",
+                @click="styleButton = !styleButton, stockStyle = false") Акции
 
       .glider-contain.multiple
         .glider.stock
-          .product-slide(v-for="item in this.wok")
+          .product-slide(v-for="item in this.stock")
             .product-card
-              +product-wok
+              +product-card
         .product-control
           button.glider-prev.stock
             img(src='/assets/img/product-arrow.png')

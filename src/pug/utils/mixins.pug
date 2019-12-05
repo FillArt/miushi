@@ -21,6 +21,10 @@ mixin text-slide(title, subtitle, boolean, discount)
 
 mixin product-card()
     .product-item--picture
+      .product-new(:class="stockStyle ? 'new' : 'stock' ", v-if="item.newProduct")
+        h5 {{ stockStyle ? 'new' : 'stock' }}
+      .product-stocks(v-if="item.stocks")
+        h5 stocks
       .product-stock.product-veg(v-if="item.veg")
         span veg
       .product-stock.product-hit(v-if="item.hit")

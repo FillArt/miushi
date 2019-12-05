@@ -8,6 +8,7 @@ import sets from "./sets";
 import rolls from "./rolls";
 import pizza from "./pizza";
 import wok from "./wok";
+import stock from "./stock";
 
 export default new Vuex.Store({
   modules: {
@@ -15,6 +16,7 @@ export default new Vuex.Store({
     sets,
     rolls,
     pizza,
-    wok
+    wok,
+    stock
   }
 });

@@ -24,6 +24,7 @@ const app = new Vue({
   data: () => ({
     menu: false,
     styleButton: true,
+    stockStyle: true,
     productCounter: 0,
     sliderAllCount: 0,
     sliderActive: 1,
@@ -102,7 +103,7 @@ const app = new Vue({
     //---------------------------------------------------
   },
   computed: {
-    ...mapGetters(["sets", "rolls", "pizza", "wok", "title"])
+    ...mapGetters(["sets", "rolls", "pizza", "wok", "stock", "title"])
   },
   watch: {
     sliderActive() {
