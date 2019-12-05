@@ -349,6 +349,7 @@
     cursor: pointer;
     &:hover {
       color: $primary-color;
+      font-weight: bold;
     }
   }
 }
