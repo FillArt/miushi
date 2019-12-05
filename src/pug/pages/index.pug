@@ -94,6 +94,20 @@ block product-wok
           button.glider-next.wok
             img(src='/assets/img/product-arrow.png')
 
+block stock
+  section.stock-wrapper
+    .container
+      .glider-contain.multiple
+        .glider.stock
+          .product-slide(v-for="item in this.wok")
+            .product-card
+              +product-wok
+        .product-control
+          button.glider-prev.stock
+            img(src='/assets/img/product-arrow.png')
+          #dots-stock.glider-dots
+          button.glider-next.stock
+            img(src='/assets/img/product-arrow.png')
 
 
 block content
