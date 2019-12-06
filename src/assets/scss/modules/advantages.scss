@@ -4,8 +4,8 @@
 .advantages-container {
   display: grid;
   justify-items: center;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 .advantages-item {
   display: inherit;
