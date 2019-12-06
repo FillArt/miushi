@@ -1,5 +1,5 @@
 .advantages {
-  margin: 90px 0 0 0;
+  margin: 90px 0 45px 0;
 }
 .advantages-title {
   position: relative;
@@ -35,7 +35,11 @@
       margin: 20px 0 0 -120px;
     }
   }
-  @media screen and (max-width: $phoneWidth) {
+  @media screen and (max-width: $tableWidth) {
+    line-height: 55px;
+    span {
+      display: block;
+    }
     padding: 0;
     &:before,
     &:after {
@@ -60,11 +64,24 @@
 .advantages-item {
   margin: 0 0 40px 0;
   width: 20%;
+  &.hidden {
+    @media screen and (max-width: $tableWidth) {
+      display: none;
+    }
+  }
+  &.visible {
+    @media screen and (max-width: $tableWidth) {
+      display: block;
+    }
+  }
   @media screen and (max-width: 1100px) {
     width: 33.33%;
     &:last-child {
       width: 100%;
     }
+  }
+  @media screen and (max-width: $tableWidth) {
+    width: 50% !important;
   }
 }
 .advantages-item--picture {
@@ -84,5 +101,32 @@
   text-align: center;
   @media screen and (max-width: 1100px) {
     padding: 0 35px;
+  }
+  @media screen and (max-width: $tableWidth) {
+    padding: 0 20px;
+  }
+}
+.advantages-mobile--button {
+  display: none;
+  cursor: pointer;
+  font-size: rem(14);
+  letter-spacing: 1px;
+  font-family: $boldFont;
+  text-transform: uppercase;
+  padding: 15px 0;
+  width: 100%;
+  color: $success-color;
+  margin: 0 auto;
+  margin-top: 25px;
+  max-width: 290px;
+  border-radius: 3px;
+  border: 1px solid $success-color;
+  background-color: transparent;
+  &:hover {
+    background-color: $success-color;
+    color: $secondFontColor;
+  }
+  @media screen and (max-width: $tableWidth) {
+    display: block;
   }
 }
