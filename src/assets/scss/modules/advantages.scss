@@ -62,7 +62,8 @@
   } */
 }
 .advantages-item {
-  margin: 0 0 40px 0;
+  //margin: 0 0 40px 0;
+  margin: 0 auto 40px;
   width: 20%;
   &.hidden {
     @media screen and (max-width: $tableWidth) {
@@ -76,9 +77,6 @@
   }
   @media screen and (max-width: 1100px) {
     width: 33.33%;
-    &:last-child {
-      width: 100%;
-    }
   }
   @media screen and (max-width: $tableWidth) {
     width: 50% !important;
@@ -104,6 +102,9 @@
   }
   @media screen and (max-width: $tableWidth) {
     padding: 0 20px;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    padding: 0 !important;
   }
 }
 .advantages-mobile--button {
