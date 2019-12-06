@@ -3,11 +3,26 @@
 }
 .advantages-container {
   display: grid;
-  justify-items: center;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin: 65px 0 0 0;
 }
 .advantages-item {
-  display: inherit;
-  justify-items: center;
+  margin: 0 0 40px 0;
+}
+.advantages-item--picture {
+  margin-bottom: 30px;
+  img {
+    display: block;
+    margin: 0 auto;
+    height: 60px;
+  }
+}
+.advantages-item--text {
+  color: $decorFontColor;
+  width: 100%;
+  font-size: rem(16);
+  padding: 0 15px;
+  line-height: 28px;
+  text-align: center;
 }
