@@ -2,6 +2,11 @@
 header {
   font-family: $mainFont;
 }
+.hidden-open-menu {
+  @media screen and (max-width: $smDesktopWidth) {
+    z-index: -1;
+  }
+}
 .line {
   border-top: 1px solid $border-light;
 }
@@ -184,6 +189,7 @@ header {
 }
 .header-menu--bg {
   @media screen and (max-width: $smDesktopWidth) {
+    outline: 1px solid red;
     background-color: rgba(0, 0, 0, 0.5);
   }
 }

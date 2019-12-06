@@ -31,7 +31,7 @@ block main
         button.main-slider--next(@click='nextSlide') &#10095;
 
 block product-sets
-  section.product
+  section.product(:class="menu ? 'hidden-open-menu' : '' ")
     .container
       .glider-contain.multiple
         h2.product-title {{ title[0] }}
@@ -47,7 +47,7 @@ block product-sets
             img(src='/assets/img/product-arrow.png')
 
 block product-rolls
-  section.product
+  section.product(:class="menu ? 'hidden-open-menu' : '' ")
     .container
       .glider-contain.multiple
         h2.product-title {{ title[1] }}
@@ -63,7 +63,7 @@ block product-rolls
             img(src='/assets/img/product-arrow.png')
 
 block product-pizza
-  section.product
+  section.product(:class="menu ? 'hidden-open-menu' : '' ")
     .container
       .glider-contain.multiple
         h2.product-title {{ title[2] }}
@@ -79,7 +79,7 @@ block product-pizza
             img(src='/assets/img/product-arrow.png')
 
 block product-wok
-  section.product
+  section.product(:class="menu ? 'hidden-open-menu' : '' ")
     .container
       .glider-contain.multiple
         h2.product-title {{ title[3] }}
@@ -95,7 +95,7 @@ block product-wok
             img(src='/assets/img/product-arrow.png')
 
 block stock
-  section.stock-wrapper
+  section.stock-wrapper(:class="menu ? 'hidden-open-menu' : '' ")
     .container
       .stock-buttons
         button(:class="styleButton ? 'active' : 'passively' ",
@@ -116,7 +116,7 @@ block stock
             img(src='/assets/img/product-arrow.png')
 
 block advantages
-  section.advantages
+  section.advantages(:class="menu ? 'hidden-open-menu' : '' ")
     .container
         h2.advantages-title <span>10 причин</span> купить у нас
         .advantages-container
@@ -125,56 +125,46 @@ block advantages
               img(src="/assets/img/advantages/item-1.png")
             .advantages-item--text
               p 100% ручная работа
-
           .advantages-item
             .advantages-item--picture
               img(src="/assets/img/advantages/item-2.png")
             .advantages-item--text
               p 100% свежие <br> ингредиенты
-
           .advantages-item
             .advantages-item--picture
               img(src="/assets/img/advantages/item-3.png")
             .advantages-item--text
               p Самые низкие цены на рынке! (Нет ресторанной наценки)
-
           .advantages-item
             .advantages-item--picture
               img(src="/assets/img/advantages/item-4.png")
             .advantages-item--text
               p Постоянный контроль качества на всех этапах
-
-
           .advantages-item(:class="mobileHidden ? 'hidden' : 'visible'")
             .advantages-item--picture
               img(src="/assets/img/advantages/item-5.png")
             .advantages-item--text
               p Только охлаждённая рыба (никакой заморозки)
-
           .advantages-item(:class="mobileHidden ? 'hidden' : 'visible'")
             .advantages-item--picture
               img(src="/assets/img/advantages/item-6.png")
             .advantages-item--text
               p Мы используем только дорогой рис из Японии
-
           .advantages-item(:class="mobileHidden ? 'hidden' : 'visible'")
             .advantages-item--picture
               img(src="/assets/img/advantages/item-7.png")
             .advantages-item--text
               p Больше начинки, меньше риса!
-
           .advantages-item(:class="mobileHidden ? 'hidden' : 'visible'")
             .advantages-item--picture
               img(src="/assets/img/advantages/item-8.png")
             .advantages-item--text
               p Мы не заменяем авокадо огурцом!
-
           .advantages-item(:class="mobileHidden ? 'hidden' : 'visible'")
             .advantages-item--picture
               img(src="/assets/img/advantages/item-9.png")
             .advantages-item--text
               p Вся пицца готовится из итальянской муки и Итальянского соуса
-
           .advantages-item(:class="mobileHidden ? 'hidden' : 'visible'")
             .advantages-item--picture
               img(src="/assets/img/advantages/item-10.png")
