@@ -174,6 +174,18 @@ block advantages
           button(@click="mobileHidden = !mobileHidden").advantages-mobile--button {{ mobileHidden ? 'Показать всё' : 'Скрыть' }}
 
 
+block reviews
+  section.reviews-wrapper(:class="menu ? 'hidden-open-menu' : '' ")
+    .container
+      .glider-contain.multiple
+        h2.reviews-title {{ title[4] }}
+        .glider.reviews
+          .product-slide(v-for="item in this.wok")
+            .product-card
+              +product-wok
+        .product-control
+          #dots-reviews.glider-reviews
+
 
 block content
   section

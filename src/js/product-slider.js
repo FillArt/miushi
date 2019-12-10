@@ -56,7 +56,7 @@ window.addEventListener("load", function() {
       }
     ]
   });
-});
+}); // Сеты
 window.addEventListener("load", function() {
     window._ = new Glider(document.querySelector(".rolls"), {
         dots: "#dots-rolls",
@@ -115,7 +115,7 @@ window.addEventListener("load", function() {
             }
         ]
     });
-});
+}); // Роллы
 window.addEventListener("load", function() {
     window._ = new Glider(document.querySelector(".pizza"), {
         dots: "#dots-pizza",
@@ -174,7 +174,7 @@ window.addEventListener("load", function() {
             }
         ]
     });
-});
+}); // Пицца
 window.addEventListener("load", function() {
     window._ = new Glider(document.querySelector(".wok"), {
         dots: "#dots-wok",
@@ -233,7 +233,7 @@ window.addEventListener("load", function() {
             }
         ]
     });
-});
+}); // WOK
 window.addEventListener("load", function() {
     window._ = new Glider(document.querySelector(".stock"), {
         dots: "#dots-stock",
@@ -292,4 +292,64 @@ window.addEventListener("load", function() {
             }
         ]
     });
-});
+}); // Новинки & Акции
+window.addEventListener("load", function() {
+    window._ = new Glider(document.querySelector(".reviews"), {
+        dots: null,
+        arrows: {
+            //prev: ".glider-prev.reviews",
+            //next: ".glider-next.reviews"
+        },
+        responsive: [
+            {
+                breakpoint: 1100,
+                settings: {
+                    slidesToShow: 3, //'auto',
+                    slidesToScroll: 3,
+                    itemWidth: 150,
+                    draggable: true,
+                    scrollLock: false,
+                    dots: null,
+                    rewind: false
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    itemWidth: 150,
+                    draggable: true,
+                    scrollLock: false,
+                    dots: null,
+                    rewind: false
+                }
+            },
+            {
+                breakpoint: 500,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    itemWidth: 150,
+                    draggable: true,
+                    scrollLock: false,
+                    dots: null,
+                    rewind: false
+                }
+            },
+            {
+                breakpoint: 320,
+                settings: {
+                    slidesToShow: 1.5,
+                    slidesToScroll: 1,
+                    itemWidth: 150,
+                    draggable: true,
+                    scrollLock: false,
+                    dots: null,
+                    rewind: false
+                }
+            }
+        ]
+    });
+}); // Отзывы
+

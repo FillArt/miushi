@@ -1,6 +1,6 @@
 export default {
   state: {
-    title: ["Сеты", "Роллы", "Пицца", "WOK"],
+    title: ["Сеты", "Роллы", "Пицца", "WOK", "Отзывы"],
   },
   mutations: {},
   actions: {},
