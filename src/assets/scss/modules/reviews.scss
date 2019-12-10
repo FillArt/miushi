@@ -57,6 +57,7 @@
   display: grid;
   align-items: center;
   grid-template-columns: 1fr 2.2fr;
+  margin: 0 0 30px 0;
 }
 .reviews-head--img {
   width: 65px;
@@ -81,4 +82,12 @@
   color: $neutral-secondary;
 }
 
+.reviews-comment {
+  font-size: rem(14);
+  border-bottom: 1px solid #e5e5e5;
+  line-height: 18px;
+  p, img {
+    margin: 0 0 24px 0;
+  }
+}
 
