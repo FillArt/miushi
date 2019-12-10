@@ -316,18 +316,6 @@ window.addEventListener("load", function() {
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    itemWidth: 150,
-                    draggable: true,
-                    scrollLock: false,
-                    dots: null,
-                    rewind: false
-                }
-            },
-            {
-                breakpoint: 500,
-                settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
                     itemWidth: 150,
@@ -338,9 +326,21 @@ window.addEventListener("load", function() {
                 }
             },
             {
+                breakpoint: 500,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    itemWidth: 150,
+                    draggable: true,
+                    scrollLock: false,
+                    dots: null,
+                    rewind: false
+                }
+            },
+            {
                 breakpoint: 320,
                 settings: {
-                    slidesToShow: 1.5,
+                    slidesToShow: 1,
                     slidesToScroll: 1,
                     itemWidth: 150,
                     draggable: true,
