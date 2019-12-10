@@ -92,6 +92,48 @@
   }
 }
 
+.reviews-footer--social {
+  margin: 0 0 18px 0;
+  display: flex;
+}
+
+.reviews-footer--heart {
+  svg > path {
+    cursor: pointer;
+    fill: #b9cadc;
+    &:hover {
+      fill: rgb(94, 129, 167);
+    }
+  }
+}
+.reviews-footer--comment {
+  margin: 0 0 0 20px;
+  width: 16px;
+  height: 16px;
+  svg > path {
+    cursor: pointer;
+    fill: #b9cadc;
+    &:hover {
+      fill: rgb(94, 129, 167);
+    }
+  }
+}
+.reviews-footer--share {
+  margin: 0 0 0 15px;
+  width: 16px;
+  height: 16px;
+  svg > path {
+    cursor: pointer;
+    fill: #b9cadc;
+    &:hover {
+      fill: rgb(94, 129, 167);
+    }
+  }
+}
+
+
+
+
 .reviews-footer--button {
   button {
     width: 100%;
