@@ -73,7 +73,7 @@
   font-family: $boldFont;
 }
 .reviews-head--name {
-  color: rgb(94,129,167);
+  color: rgb(94, 129, 167);
   font-size: rem(14);
 }
 .reviews-head--data {
@@ -81,13 +81,43 @@
   font-size: rem(13);
   color: $neutral-secondary;
 }
-
 .reviews-comment {
   font-size: rem(14);
   border-bottom: 1px solid #e5e5e5;
   line-height: 18px;
-  p, img {
+  margin: 0 0 15px 0;
+  p,
+  img {
     margin: 0 0 24px 0;
   }
 }
 
+.reviews-footer--button {
+  button {
+    width: 100%;
+    cursor: pointer;
+    color: $secondFontColor;
+    font-family: $boldFont;
+    border-radius: 3px;
+    background-color: rgb(94, 129, 167);
+    padding: 10px 0;
+    &:hover {
+      background-color: rgb(76, 106, 167);
+    }
+    span {
+      margin: 0 0 0 20px;
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        width: 16px;
+        left: -25px;
+        top: 2px;
+        height: 16px;
+        background-image: url("/assets/img/reviews/vk-social.png");
+
+      }
+    }
+  }
+}
