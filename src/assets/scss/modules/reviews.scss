@@ -39,3 +39,46 @@
   flex-wrap: wrap;
   justify-content: space-around;
 }
+.reviews-card {
+  display: flex;
+  padding: 45px;
+  flex-direction: column;
+  background-color: $secondFontColor;
+  border: 1px solid #e5e5e5;
+  max-width: 360px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+//-------------------
+.reviews-head {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 2.2fr;
+}
+.reviews-head--img {
+  width: 65px;
+  height: 65px;
+  img {
+    border-radius: 50%;
+  }
+}
+.reviews-head--title {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-family: $boldFont;
+}
+.reviews-head--name {
+  color: rgb(94,129,167);
+  font-size: rem(14);
+}
+.reviews-head--data {
+  margin: -0 0 0 0;
+  font-size: rem(13);
+  color: $neutral-secondary;
+}
+
+
