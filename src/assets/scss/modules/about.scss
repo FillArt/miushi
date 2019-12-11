@@ -26,6 +26,9 @@
     background-repeat: no-repeat;
     margin: 20px 0 0 40px;
   }
+  @media screen and (max-width: $tableWidth) {
+    margin: 0 0 50px 0;
+  }
   @media screen and (max-width: $phoneWidth) {
     padding: 0;
     &:before,
@@ -37,6 +40,9 @@
 .about-content {
   display: grid;
   grid-template-columns: 3fr 1fr;
+  @media screen and (max-width: $tableWidth) {
+    grid-template-columns: 1fr;
+  }
 }
 .about-content--title {
   display: inline-block;
@@ -44,11 +50,20 @@
   font-family: $boldFont;
   margin: 0 0 40px 0;
   color: $decorFontColor;
+  @media screen and (max-width: 941px) {
+    font-size: rem(22);
+  }
+  @media screen and (max-width: $tableWidth) {
+    font-size: rem(20);
+  }
 }
 .about-content--text {
   padding: 0 60px 0 0;
   @media screen and (max-width: 941px) {
     padding: 0 30px 0 0;
+  }
+  @media screen and (max-width: $tableWidth) {
+    padding: 0 !important;
   }
   color: $decorFontColor;
   font-size: rem(14);
@@ -61,9 +76,49 @@
     width: 100%;
     min-height: 375px;
   }
+  @media screen and (max-width: $tableWidth) {
+    display: none;
+  }
 }
 .about-content--last {
   @media screen and (max-width: 941px) {
     position: absolute;
+  }
+  @media screen and (max-width: $tableWidth) {
+    position: relative !important;
+  }
+}
+.hidden {
+  @media screen and (max-width: $tableWidth) {
+    display: none;
+  }
+}
+.visible {
+  @media screen and (max-width: $tableWidth) {
+    display: block;
+  }
+}
+.about-mobile--button {
+  display: none;
+  cursor: pointer;
+  font-size: rem(14);
+  letter-spacing: 1px;
+  font-family: $boldFont;
+  text-transform: uppercase;
+  padding: 15px 0;
+  width: 100%;
+  color: $success-color;
+  margin: 0 auto;
+  margin-top: 25px;
+  max-width: 290px;
+  border-radius: 3px;
+  border: 1px solid $success-color;
+  background-color: transparent;
+  &:hover {
+    background-color: $success-color;
+    color: $secondFontColor;
+  }
+  @media screen and (max-width: $tableWidth) {
+    display: block;
   }
 }

@@ -25,6 +25,7 @@ const app = new Vue({
     styleButton: true,
     stockStyle: true,
     mobileHidden: true,
+    aboutHidden: true,
     productCounter: 0,
     sliderAllCount: 0,
     sliderActive: 1,
