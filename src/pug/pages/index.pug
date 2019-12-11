@@ -174,7 +174,7 @@ block reviews
               +reviews-card
 
 block form
-  section.feedback
+  section.feedback(:class="menu ? 'hidden-open-menu' : '' ")
     .container
       .feedback-content
         span.feedback-content--subtitle Есть вопросы?
