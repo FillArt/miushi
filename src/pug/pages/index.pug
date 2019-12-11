@@ -173,7 +173,6 @@ block advantages
 
           button(@click="mobileHidden = !mobileHidden").advantages-mobile--button {{ mobileHidden ? 'Показать всё' : 'Скрыть' }}
 
-
 block reviews
   section.reviews-wrapper(:class="menu ? 'hidden-open-menu' : '' ")
     .container
@@ -183,15 +182,24 @@ block reviews
           .product-slide(v-for="item in 6")
             .reviews-card
               +reviews-card
-        .product-control
-          #dots-reviews.glider-reviews
+
+block form
+  section.feedback
+    .container
+      .feedback-content
+        span.feedback-content--subtitle Есть вопросы?
+        h2.feedback-content--title Оставьте свои контакты
+        form.feedback-form
+          input(type="text", placeholder="Имя")
+          input(type="text", placeholder="Телефон")
+          button Отправить
+        span.feedback-content--note Нажимая на кнопку «Отправить», вы даете согласие на обработку своих персональных данных.
+
 
 
 block content
   section
     .container
-      .glider-contain.multiple
-        h1 User Testing
 
 
 block script

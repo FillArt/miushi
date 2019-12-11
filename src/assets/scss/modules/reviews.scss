@@ -51,8 +51,6 @@
   margin-bottom: 20px;
   width: 100%;
 }
-
-//-------------------
 .reviews-head {
   display: grid;
   align-items: center;
@@ -91,12 +89,10 @@
     margin: 0 0 24px 0;
   }
 }
-
 .reviews-footer--social {
   margin: 0 0 18px 0;
   display: flex;
 }
-
 .reviews-footer--heart {
   svg > path {
     cursor: pointer;
@@ -130,7 +126,6 @@
     }
   }
 }
-
 .reviews-footer--button {
   button {
     width: 100%;
