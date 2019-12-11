@@ -4,10 +4,6 @@ block variables
   - var title = 'Миюши | Cуши & Роллы';
   - var description = 'Description for Webpack + Pug';
   - var pageClass = 'index-page';
-block content
-  section
-    .container
-  example-component
 
 block main
   section.main
@@ -29,7 +25,6 @@ block main
             input(type='radio', :id='[`main-slide--` + i]', name="slide")
             label(:for='[`main-slide--` + i]', @click='openSlide(i)')
         button.main-slider--next(@click='nextSlide') &#10095;
-
 block product-sets
   section.product(:class="menu ? 'hidden-open-menu' : '' ")
     .container
@@ -45,7 +40,6 @@ block product-sets
           #dots-set.glider-dots
           button.glider-next
             img(src='/assets/img/product-arrow.png')
-
 block product-rolls
   section.product(:class="menu ? 'hidden-open-menu' : '' ")
     .container
@@ -61,7 +55,6 @@ block product-rolls
           #dots-rolls.glider-dots
           button.glider-next.rolls
             img(src='/assets/img/product-arrow.png')
-
 block product-pizza
   section.product(:class="menu ? 'hidden-open-menu' : '' ")
     .container
@@ -77,7 +70,6 @@ block product-pizza
           #dots-pizza.glider-dots
           button.glider-next.pizza
             img(src='/assets/img/product-arrow.png')
-
 block product-wok
   section.product(:class="menu ? 'hidden-open-menu' : '' ")
     .container
@@ -93,7 +85,6 @@ block product-wok
           #dots-wok.glider-dots
           button.glider-next.wok
             img(src='/assets/img/product-arrow.png')
-
 block stock
   section.stock-wrapper(:class="menu ? 'hidden-open-menu' : '' ")
     .container
@@ -114,7 +105,6 @@ block stock
           #dots-stock.glider-dots
           button.glider-next.stock
             img(src='/assets/img/product-arrow.png')
-
 block advantages
   section.advantages(:class="menu ? 'hidden-open-menu' : '' ")
     .container
@@ -194,12 +184,6 @@ block form
           input(type="text", placeholder="Телефон")
           button Отправить
         span.feedback-content--note Нажимая на кнопку «Отправить», вы даете согласие на обработку своих персональных данных.
-
-
-
-block content
-  section
-    .container
 
 
 block script
