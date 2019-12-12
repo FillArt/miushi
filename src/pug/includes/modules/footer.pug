@@ -44,8 +44,8 @@ footer
     .footer-mobile
       .footer-mobile--title
         span Меню
-        img(src="/assets/img/arrow-footer.png")
-      .footer-mobile--content
+        img(src="/assets/img/arrow-footer.png", @click="footerMenu = !footerMenu")
+      .footer-mobile--content(v-if="footerMenu")
         span Суши
         span Гуканы
         span Инари
@@ -59,8 +59,8 @@ footer
 
       .footer-mobile--title
         span Сеты
-        img(src="/assets/img/arrow-footer.png")
-      .footer-mobile--content
+        img(src="/assets/img/arrow-footer.png", @click="footerSets = !footerSets")
+      .footer-mobile--content(v-if="footerSets")
         span Суши
         span Гуканы
         span Инари
@@ -73,8 +73,8 @@ footer
 
       .footer-mobile--title
         span Роллы
-        img(src="/assets/img/arrow-footer.png")
-      .footer-mobile--content
+        img(src="/assets/img/arrow-footer.png", @click="footerRolls = !footerRolls")
+      .footer-mobile--content(v-if="footerRolls")
         span Суши
         span Гуканы
         span Инари
@@ -87,8 +87,8 @@ footer
 
       .footer-mobile--title
         span Вок
-        img(src="/assets/img/arrow-footer.png")
-      .footer-mobile--content
+        img(src="/assets/img/arrow-footer.png", @click="footerWok = !footerWok")
+      .footer-mobile--content(v-if="footerWok")
         span Суши
         span Гуканы
         span Инари
@@ -101,8 +101,8 @@ footer
 
       .footer-mobile--title
         span Пицца
-        img(src="/assets/img/arrow-footer.png")
-      .footer-mobile--content
+        img(src="/assets/img/arrow-footer.png", @click="footerPizza = !footerPizza")
+      .footer-mobile--content(v-if="footerPizza")
         span Суши
         span Гуканы
         span Инари
