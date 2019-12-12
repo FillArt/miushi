@@ -1,11 +1,12 @@
 // footer style
 footer {
   background-color: $footer-color;
-  padding: 75px 0 60px 0;
+  padding: 75px 0 67px 0;
 }
 .footer-container {
   display: grid;
   grid-template-columns: 1fr 2fr 1.5fr 1fr;
+  margin: 0 0 50px 0;
 }
 .footer-main {
   display: flex;
@@ -26,7 +27,7 @@ footer {
   display: block;
   font-size: rem(14);
   color: $secondFontColor;
-  margin: 0 0 15px 0;
+  margin: 0 0 18px 0;
 }
 .footer-sets--container {
   display: flex;
@@ -60,6 +61,44 @@ footer {
     margin: 0 0 10px 0;
     &:hover {
       color: $border-base
+    }
+  }
+}
+//----------------------------
+
+.footer-bottom {
+  display: flex;
+  flex-direction: row;
+}
+.footer-bottom--item {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  span {
+    color: rgb(107,150,165);
+    font-size: rem(12);
+    display: inline-block;
+    a {
+      cursor: pointer;
+      text-decoration: underline;
+      &:hover {
+        color: $border-base
+      }
+    }
+  }
+}
+.footer-social {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+}
+.footer-social--item {
+  padding: 0 5px;
+  img {
+    cursor: pointer;
+    opacity: 0.6;
+    &:hover {
+      opacity: 1;
     }
   }
 }
