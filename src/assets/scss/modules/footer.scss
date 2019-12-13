@@ -24,11 +24,12 @@ footer {
     color: $secondFontColor;
     margin: 0 0 11px 0;
     &:hover {
-      color: $border-base
+      color: $border-base;
     }
   }
 }
-.footer-sets {}
+.footer-sets {
+}
 .footer-title {
   display: block;
   font-size: rem(14);
@@ -46,10 +47,10 @@ footer {
     cursor: pointer;
     display: inline-block;
     font: rem(12);
-    color: rgb(107,150,165);
+    color: rgb(107, 150, 165);
     margin: 0 0 10px 0;
     &:hover {
-      color: $border-base
+      color: $border-base;
     }
   }
 }
@@ -63,14 +64,13 @@ footer {
     cursor: pointer;
     display: inline-block;
     font: rem(12);
-    color: rgb(107,150,165);
+    color: rgb(107, 150, 165);
     margin: 0 0 10px 0;
     &:hover {
-      color: $border-base
+      color: $border-base;
     }
   }
 }
-//----------------------------
 .footer-mobile {
   display: none;
   margin: 0 0 42px 0;
@@ -96,6 +96,9 @@ footer {
     &:hover {
       opacity: 1;
     }
+    &.open {
+      transform: rotate(180deg);
+    }
   }
 }
 .footer-mobile--content {
@@ -105,32 +108,53 @@ footer {
     cursor: pointer;
     padding: 10px 0;
     display: block;
-    color: rgb(107,150,165);
+    color: rgb(107, 150, 165);
     font-size: rem(12);
     &:hover {
-      color: $border-base
+      color: $border-base;
     }
   }
 }
+
 //----------------------------
 .footer-bottom {
   display: flex;
   flex-direction: row;
+  @media screen and (max-width: $smDesktopWidth) {
+    flex-direction: column;
+  }
 }
 .footer-bottom--item {
   display: flex;
   justify-content: space-between;
   width: 50%;
   span {
-    color: rgb(107,150,165);
+    color: rgb(107, 150, 165);
     font-size: rem(12);
     display: inline-block;
     a {
       cursor: pointer;
       text-decoration: underline;
       &:hover {
-        color: $border-base
+        color: $border-base;
       }
+    }
+  }
+  @media screen and (max-width: $smDesktopWidth) {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    span {
+      display: block;
+      margin: 0 0 40px 0;
+      &:first-child {
+        order: 2;
+        margin: 0;
+      }
+    }
+    &:first-child {
+      order: 2;
     }
   }
 }
@@ -138,6 +162,9 @@ footer {
   display: flex;
   flex-direction: row;
   margin-left: auto;
+  @media screen and (max-width: $smDesktopWidth) {
+    margin: 0 auto 40px;
+  }
 }
 .footer-social--item {
   padding: 0 5px;

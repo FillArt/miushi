@@ -3,6 +3,9 @@
   background-size: cover;
   margin: 0 0 70px 0;
   padding: 81px 0 60px 0;
+  @media screen and (max-width: $phoneWidth) {
+    margin: 0 0 40px 0;
+  }
 }
 .feedback-content {
   margin: 0 0 0 33%;
