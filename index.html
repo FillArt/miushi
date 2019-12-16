@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Миюши | Cуши &amp; Роллы</title>
+    <meta name="description" content="Description for Webpack + Pug" />
+    <link href="./assets/css/app.d05f1c1506ed6d193d62.css" rel="stylesheet" />
+  </head>
+  <body class="index-page">
+    <div class="wrapper">
+      <div id="app">
+        <header>
+          <div class="container">
+            <div class="header-top">
+              <div class="header-logo">
+                <img
+                  class="header-logo--desktop"
+                  src="./assets/img/logo.png"
+                /><img
+                  class="header-logo--mobile"
+                  src="./assets/img/logo-mobile.png"
+                />
+              </div>
+              <div class="header-contact">
+                <span class="header-contact--sity">г.Курск, ул.Ленина, д.3</span
+                ><span class="header-contact--number"
+                  >78003332222@yandex.ru</span
+                ><img src="./assets/img/menu-header.png" @click="menuModal" />
+                <div class="header-modal--bg">
+                  <div class="header-modal" v-if="menu">
+                    <img src="./assets/img/close-menu.png" @click="menuModal" />
+                    <div class="header-menu">
+                      <ul>
+                        <li><span class="header-menu--item">Меню</span></li>
+                        <li>
+                          <span class="header-menu--item">Акции и скидки</span>
+                        </li>
+                        <li>
+                          <span class="header-menu--item"
+                            >Доставка и оплата</span
+                          >
+                        </li>
+                        <li><span class="header-menu--item">Контакты</span></li>
+                      </ul>
+                    </div>
+                    <p>
+                      <strong>+7 (800) 333 2 222</strong
+                      ><span>Работаем с 11.00 до 23.00</span>
+                    </p>
+                    <button>Обратный звонок</button
+                    ><span class="header-modal--sity"
+                      >г.Курск, ул.Ленина, д.3</span
+                    ><span class="header-modal--number"
+                      >78003332222@yandex.ru</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="header-feedback">
+                <p>
+                  <strong>+7 (800) 333 2 222</strong
+                  ><span>Работаем с 11.00 до 23.00</span>
+                </p>
+                <button @click="scrollFeedback()">Обратный звонок</button
+                ><img src="./assets/img/user-header.png" />
+                <div class="header-mobile-cart">
+                  <img src="./assets/img/cart-header.png" />
+                  <div class="header-user-counter">
+                    <span>{{ productCounter }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="line"></div>
+          <div class="container">
+            <div class="header-bottom">
+              <div class="header-menu">
+                <ul>
+                  <li><span class="header-menu--arrow">Меню</span></li>
+                  <li><span class="header-menu--item">Акции и скидки</span></li>
+                  <li>
+                    <span class="header-menu--item">Доставка и оплата</span>
+                  </li>
+                  <li><span class="header-menu--item">Контакты</span></li>
+                </ul>
+              </div>
+              <div class="header-user">
+                <span class="header-user--cabinet">Кабинет</span
+                ><span class="header-user--basket"
+                  >Корзина
+                  <div class="header-user-counter">
+                    <span>{{ productCounter }}</span>
+                  </div></span
+                >
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="content-wrapper">
+          <section class="main">
+            <div class="main-slider">
+              <div class="slider js-slider">
+                <div
+                  class="slider-body"
+                  :style='{left: sliderOffsetLeft + "px"}'
+                >
+                  <div
+                    class="slider-slide js-slide"
+                    v-for="slide in sliderList"
+                    :style='"background-image: url(" + slide.img + ")"'
+                  >
+                    <div class="container">
+                      <div class="main-slider--text">
+                        <span class="main-slider--title"
+                          >{{ slide.title }}<span
+                            class="main-discount"
+                            v-if="slide.discount"
+                            >скидка<strong
+                              >{{ slide.sumDiscount }} %</strong
+                            ></span
+                          ></span
+                        ><span class="main-slider--subtitle"
+                          >{{ slide.subtitle }}</span
+                        ><button class="main-slider--detail">Подробнее</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="main-slider--button">
+                <button class="main-slider--prev" @click="prevSlide">
+                  &#10094;
+                </button>
+                <div class="main-slider--points">
+                  <div class="main-slider--dot" v-for="i in sliderAllCount">
+                    <input
+                      type="radio"
+                      :id="[`main-slide--` + i]"
+                      name="slide"
+                    /><label
+                      :for="[`main-slide--` + i]"
+                      @click="openSlide(i)"
+                    ></label>
+                  </div>
+                </div>
+                <button class="main-slider--next" @click="nextSlide">
+                  &#10095;
+                </button>
+              </div>
+            </div>
+          </section>
+          <section class="product" :class="menu ? 'hidden-open-menu' : '' ">
+            <div class="container">
+              <div class="glider-contain multiple">
+                <h2 class="product-title">{{ title[0] }}</h2>
+                <div class="glider set">
+                  <div class="product-slide" v-for="item in this.sets">
+                    <div class="product-card">
+                      <div class="product-item--picture">
+                        <div
+                          class="product-new"
+                          :class="stockStyle ? 'new' : 'stock' "
+                          v-if="item.newProduct"
+                        >
+                          <h5>{{ stockStyle ? 'new' : 'stock' }}</h5>
+                        </div>
+                        <div class="product-stocks" v-if="item.stocks">
+                          <h5>stocks</h5>
+                        </div>
+                        <div class="product-stock product-veg" v-if="item.veg">
+                          <span>veg</span>
+                        </div>
+                        <div class="product-stock product-hit" v-if="item.hit">
+                          <span>хит</span>
+                        </div>
+                        <div class="product-stock product-hit" v-if="item.hot">
+                          <img
+                            src="./assets/img/fire.png"
+                            style="height: 30px; width: 23px; margin-top: 10px;"
+                          />
+                        </div>
+                        <img :src="item.img" />
+                      </div>
+                      <div class="product-item--calc">
+                        <h3>{{ item.title }}</h3>
+                        <span class="product-cost--option">
+                          {{ item.quantity * item.item }} {{ item.type }} | {{
+                          item.grams * item.item }} г. | {{ item.сalory *
+                          item.item }} Kkal</span
+                        >
+                        <div class="product-wrapper">
+                          <div class="product-price">
+                            <strong
+                              >{{ item.price * item.item }}
+                              <sup> руб.</sup></strong
+                            >
+                          </div>
+                          <div class="product-payment">
+                            <button
+                              class="product-payment--minus"
+                              @click="item.item -= item.item - 1 === 0 ? 0 : 1"
+                            ></button
+                            ><span>{{ item.item }}</span
+                            ><button
+                              class="product-payment--plus"
+                              @click="item.item += 1"
+                            ></button>
+                          </div>
+                        </div>
+                        <button
+                          class="product-item--sale"
+                          @click="productCounter += 1"
+                        >
+                          <span>В корзину</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-control">
+                  <button class="glider-prev">
+                    <img src="./assets/img/product-arrow.png" />
+                  </button>
+                  <div class="glider-dots" id="dots-set"></div>
+                  <button class="glider-next">
+                    <img src="./assets/img/product-arrow.png" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="product" :class="menu ? 'hidden-open-menu' : '' ">
+            <div class="container">
+              <div class="glider-contain multiple">
+                <h2 class="product-title">{{ title[1] }}</h2>
+                <div class="glider rolls">
+                  <div class="product-slide" v-for="item in this.rolls">
+                    <div class="product-card">
+                      <div class="product-item--picture">
+                        <div
+                          class="product-new"
+                          :class="stockStyle ? 'new' : 'stock' "
+                          v-if="item.newProduct"
+                        >
+                          <h5>{{ stockStyle ? 'new' : 'stock' }}</h5>
+                        </div>
+                        <div class="product-stocks" v-if="item.stocks">
+                          <h5>stocks</h5>
+                        </div>
+                        <div class="product-stock product-veg" v-if="item.veg">
+                          <span>veg</span>
+                        </div>
+                        <div class="product-stock product-hit" v-if="item.hit">
+                          <span>хит</span>
+                        </div>
+                        <div class="product-stock product-hit" v-if="item.hot">
+                          <img
+                            src="./assets/img/fire.png"
+                            style="height: 30px; width: 23px; margin-top: 10px;"
+                          />
+                        </div>
+                        <img :src="item.img" />
+                      </div>
+                      <div class="product-item--calc">
+                        <h3>{{ item.title }}</h3>
+                        <span class="product-cost--option">
+                          {{ item.quantity * item.item }} {{ item.type }} | {{
+                          item.grams * item.item }} г. | {{ item.сalory *
+                          item.item }} Kkal</span
+                        >
+                        <div class="product-wrapper">
+                          <div class="product-price">
+                            <strong
+                              >{{ item.price * item.item }}
+                              <sup> руб.</sup></strong
+                            >
+                          </div>
+                          <div class="product-payment">
+                            <button
+                              class="product-payment--minus"
+                              @click="item.item -= item.item - 1 === 0 ? 0 : 1"
+                            ></button
+                            ><span>{{ item.item }}</span
+                            ><button
+                              class="product-payment--plus"
+                              @click="item.item += 1"
+                            ></button>
+                          </div>
+                        </div>
+                        <button
+                          class="product-item--sale"
+                          @click="productCounter += 1"
+                        >
+                          <span>В корзину</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-control">
+                  <button class="glider-prev rolls">
+                    <img src="./assets/img/product-arrow.png" />
+                  </button>
+                  <div class="glider-dots" id="dots-rolls"></div>
+                  <button class="glider-next rolls">
+                    <img src="./assets/img/product-arrow.png" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="product" :class="menu ? 'hidden-open-menu' : '' ">
+            <div class="container">
+              <div class="glider-contain multiple">
+                <h2 class="product-title">{{ title[2] }}</h2>
+                <div class="glider pizza">
+                  <div class="product-slide" v-for="item in this.pizza">
+                    <div class="product-card">
+                      <div class="product-item--picture">
+                        <div
+                          class="product-new"
+                          :class="stockStyle ? 'new' : 'stock' "
+                          v-if="item.newProduct"
+                        >
+                          <h5>{{ stockStyle ? 'new' : 'stock' }}</h5>
+                        </div>
+                        <div class="product-stocks" v-if="item.stocks">
+                          <h5>stocks</h5>
+                        </div>
+                        <div class="product-stock product-veg" v-if="item.veg">
+                          <span>veg</span>
+                        </div>
+                        <div class="product-stock product-hit" v-if="item.hit">
+                          <span>хит</span>
+                        </div>
+                        <div class="product-stock product-hit" v-if="item.hot">
+                          <img
+                            src="./assets/img/fire.png"
+                            style="height: 30px; width: 23px; margin-top: 10px;"
+                          />
+                        </div>
+                        <img :src="item.img" />
+                      </div>
+                      <div class="product-item--calc">
+                        <h3>{{ item.title }}</h3>
+                        <span class="product-cost--option">
+                          {{ item.quantity * item.item }} {{ item.type }} | {{
+                          item.grams * item.item }} г. | {{ item.сalory *
+                          item.item }} Kkal</span
+                        >
+                        <div class="product-wrapper">
+                          <div class="product-price">
+                            <strong
+                              >{{ item.price * item.item }}
+                              <sup> руб.</sup></strong
+                            >
+                          </div>
+                          <div class="product-payment">
+                            <button
+                              class="product-payment--minus"
+                              @click="item.item -= item.item - 1 === 0 ? 0 : 1"
+                            ></button
+                            ><span>{{ item.item }}</span
+                            ><button
+                              class="product-payment--plus"
+                              @click="item.item += 1"
+                            ></button>
+                          </div>
+                        </div>
+                        <button
+                          class="product-item--sale"
+                          @click="productCounter += 1"
+                        >
+                          <span>В корзину</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-control">
+                  <button class="glider-prev pizza">
+                    <img src="./assets/img/product-arrow.png" />
+                  </button>
+                  <div class="glider-dots" id="dots-pizza"></div>
+                  <button class="glider-next pizza">
+                    <img src="./assets/img/product-arrow.png" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="product" :class="menu ? 'hidden-open-menu' : '' ">
+            <div class="container">
+              <div class="glider-contain multiple">
+                <h2 class="product-title">{{ title[3] }}</h2>
+                <div class="glider wok">
+                  <div class="product-slide" v-for="item in this.wok">
+                    <div class="product-card">
+                      <div class="product-item--picture">
+                        <div class="product-stock product-veg" v-if="item.veg">
+                          <span>veg</span>
+                        </div>
+                        <div class="product-stock product-hit" v-if="item.hit">
+                          <span>хит</span>
+                        </div>
+                        <div class="product-stock product-hit" v-if="item.hot">
+                          <img
+                            src="./assets/img/fire.png"
+                            style="height: 30px; width: 23px; margin-top: 10px;"
+                          />
+                        </div>
+                        <img
+                          :src="item.img"
+                          style="height: 200px; padding: 35px 0 0 0 "
+                        />
+                      </div>
+                      <div class="product-item--calc">
+                        <h3>{{ item.title }}</h3>
+                        <span class="wok"
+                          >{{ item.grams * item.item }} г. | {{ item.сalory *
+                          item.item }} Kkal</span
+                        >
+                        <div class="product-additive">
+                          <div class="product-quantity">
+                            <div class="product-quantity--text">
+                              <span>Добавить:</span>
+                            </div>
+                            <div class="product-quantity--number">
+                              <span>+ {{ item.itemMore }}</span
+                              ><button @click="item.itemMore = 1">x</button>
+                            </div>
+                          </div>
+                          <div class="product-cost">
+                            <div class="product-cost--price">
+                              <span
+                                >{{ item.priceMore * item.itemMore }}
+                                <sup>руб</sup></span
+                              >
+                            </div>
+                            <div class="product-cost--add">
+                              <button @click="item.itemMore += 1">+</button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="product-sauce">
+                          <div class="product-sauce--list">
+                            <h5>{{ item.itemSubmenu }}</h5>
+                            <button @click="item.submenu = !item.submenu">
+                              <span>&#8964;</span>
+                            </button>
+                          </div>
+                          <div
+                            class="product-sauce--submenu"
+                            v-show="item.submenu"
+                          >
+                            <span
+                              @click="item.itemSubmenu = item.listSubmenu.one, item.submenu = !item.submenu"
+                              >{{ item.listSubmenu.one }}</span
+                            ><span
+                              @click="item.itemSubmenu = item.listSubmenu.second, item.submenu = !item.submenu"
+                              >{{ item.listSubmenu.second }}</span
+                            ><span
+                              @click="item.itemSubmenu = item.listSubmenu.third, item.submenu = !item.submenu"
+                              >{{ item.listSubmenu.third }}</span
+                            ><span
+                              @click="item.itemSubmenu = item.listSubmenu.fourth, item.submenu = !item.submenu"
+                              >{{ item.listSubmenu.fourth }}</span
+                            >
+                          </div>
+                        </div>
+                        <div class="product-wrapper">
+                          <div class="product-price">
+                            <strong
+                              >{{ item.price * item.item + item.priceMore *
+                              item.itemMore }} <sup> руб.</sup></strong
+                            >
+                          </div>
+                          <div class="product-payment">
+                            <button
+                              class="product-payment--minus"
+                              @click="item.item -= item.item - 1 === 0 ? 0 : 1"
+                            ></button
+                            ><span>{{ item.item }}</span
+                            ><button
+                              class="product-payment--plus"
+                              @click="item.item += 1"
+                            ></button>
+                          </div>
+                        </div>
+                        <button
+                          class="product-item--sale"
+                          @click="productCounter += 1"
+                        >
+                          <span>В корзину</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-control">
+                  <button class="glider-prev wok">
+                    <img src="./assets/img/product-arrow.png" />
+                  </button>
+                  <div class="glider-dots" id="dots-wok"></div>
+                  <button class="glider-next wok">
+                    <img src="./assets/img/product-arrow.png" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section
+            class="stock-wrapper"
+            :class="menu ? 'hidden-open-menu' : '' "
+          >
+            <div class="container">
+              <div class="stock-buttons">
+                <button
+                  :class="styleButton ? 'active' : 'passively' "
+                  @click="styleButton = !styleButton, stockStyle = true"
+                >
+                  Новинки</button
+                ><button
+                  :class="styleButton ? 'passively' : 'active' "
+                  @click="styleButton = !styleButton, stockStyle = false"
+                >
+                  Акции
+                </button>
+              </div>
+              <div class="glider-contain multiple">
+                <div class="glider stock">
+                  <div class="product-slide" v-for="item in this.stock">
+                    <div class="product-card">
+                      <div class="product-item--picture">
+                        <div
+                          class="product-new"
+                          :class="stockStyle ? 'new' : 'stock' "
+                          v-if="item.newProduct"
+                        >
+                          <h5>{{ stockStyle ? 'new' : 'stock' }}</h5>
+                        </div>
+                        <div class="product-stocks" v-if="item.stocks">
+                          <h5>stocks</h5>
+                        </div>
+                        <div class="product-stock product-veg" v-if="item.veg">
+                          <span>veg</span>
+                        </div>
+                        <div class="product-stock product-hit" v-if="item.hit">
+                          <span>хит</span>
+                        </div>
+                        <div class="product-stock product-hit" v-if="item.hot">
+                          <img
+                            src="./assets/img/fire.png"
+                            style="height: 30px; width: 23px; margin-top: 10px;"
+                          />
+                        </div>
+                        <img :src="item.img" />
+                      </div>
+                      <div class="product-item--calc">
+                        <h3>{{ item.title }}</h3>
+                        <span class="product-cost--option">
+                          {{ item.quantity * item.item }} {{ item.type }} | {{
+                          item.grams * item.item }} г. | {{ item.сalory *
+                          item.item }} Kkal</span
+                        >
+                        <div class="product-wrapper">
+                          <div class="product-price">
+                            <strong
+                              >{{ item.price * item.item }}
+                              <sup> руб.</sup></strong
+                            >
+                          </div>
+                          <div class="product-payment">
+                            <button
+                              class="product-payment--minus"
+                              @click="item.item -= item.item - 1 === 0 ? 0 : 1"
+                            ></button
+                            ><span>{{ item.item }}</span
+                            ><button
+                              class="product-payment--plus"
+                              @click="item.item += 1"
+                            ></button>
+                          </div>
+                        </div>
+                        <button
+                          class="product-item--sale"
+                          @click="productCounter += 1"
+                        >
+                          <span>В корзину</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-control">
+                  <button class="glider-prev stock">
+                    <img src="./assets/img/product-arrow.png" />
+                  </button>
+                  <div class="glider-dots" id="dots-stock"></div>
+                  <button class="glider-next stock">
+                    <img src="./assets/img/product-arrow.png" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="advantages" :class="menu ? 'hidden-open-menu' : '' ">
+            <div class="container">
+              <h2 class="advantages-title">
+                <span>10 причин</span> купить у нас
+              </h2>
+              <div class="advantages-container">
+                <div class="advantages-item">
+                  <div class="advantages-item--picture">
+                    <img src="./assets/img/advantages/item-1.png" />
+                  </div>
+                  <div class="advantages-item--text">
+                    <p>100% ручная работа</p>
+                  </div>
+                </div>
+                <div class="advantages-item">
+                  <div class="advantages-item--picture">
+                    <img src="./assets/img/advantages/item-2.png" />
+                  </div>
+                  <div class="advantages-item--text">
+                    <p>
+                      100% свежие <br />
+                      ингредиенты
+                    </p>
+                  </div>
+                </div>
+                <div class="advantages-item">
+                  <div class="advantages-item--picture">
+                    <img src="./assets/img/advantages/item-3.png" />
+                  </div>
+                  <div class="advantages-item--text">
+                    <p>Самые низкие цены на рынке! (Нет ресторанной наценки)</p>
+                  </div>
+                </div>
+                <div class="advantages-item">
+                  <div class="advantages-item--picture">
+                    <img src="./assets/img/advantages/item-4.png" />
+                  </div>
+                  <div class="advantages-item--text">
+                    <p>Постоянный контроль качества на всех этапах</p>
+                  </div>
+                </div>
+                <div
+                  class="advantages-item"
+                  :class="mobileHidden ? 'hidden' : 'visible'"
+                >
+                  <div class="advantages-item--picture">
+                    <img src="./assets/img/advantages/item-5.png" />
+                  </div>
+                  <div class="advantages-item--text">
+                    <p>Только охлаждённая рыба (никакой заморозки)</p>
+                  </div>
+                </div>
+                <div
+                  class="advantages-item"
+                  :class="mobileHidden ? 'hidden' : 'visible'"
+                >
+                  <div class="advantages-item--picture">
+                    <img src="./assets/img/advantages/item-6.png" />
+                  </div>
+                  <div class="advantages-item--text">
+                    <p>Мы используем только дорогой рис из Японии</p>
+                  </div>
+                </div>
+                <div
+                  class="advantages-item"
+                  :class="mobileHidden ? 'hidden' : 'visible'"
+                >
+                  <div class="advantages-item--picture">
+                    <img src="./assets/img/advantages/item-7.png" />
+                  </div>
+                  <div class="advantages-item--text">
+                    <p>Больше начинки, меньше риса!</p>
+                  </div>
+                </div>
+                <div
+                  class="advantages-item"
+                  :class="mobileHidden ? 'hidden' : 'visible'"
+                >
+                  <div class="advantages-item--picture">
+                    <img src="./assets/img/advantages/item-8.png" />
+                  </div>
+                  <div class="advantages-item--text">
+                    <p>Мы не заменяем авокадо огурцом!</p>
+                  </div>
+                </div>
+                <div
+                  class="advantages-item"
+                  :class="mobileHidden ? 'hidden' : 'visible'"
+                >
+                  <div class="advantages-item--picture">
+                    <img src="./assets/img/advantages/item-9.png" />
+                  </div>
+                  <div class="advantages-item--text">
+                    <p>
+                      Вся пицца готовится из итальянской муки и Итальянского
+                      соуса
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="advantages-item"
+                  :class="mobileHidden ? 'hidden' : 'visible'"
+                >
+                  <div class="advantages-item--picture">
+                    <img src="./assets/img/advantages/item-10.png" />
+                  </div>
+                  <div class="advantages-item--text">
+                    <p>
+                      Мы не используем <br />
+                      майонез!
+                    </p>
+                  </div>
+                </div>
+                <button
+                  class="advantages-mobile--button"
+                  @click="mobileHidden = !mobileHidden"
+                >
+                  {{ mobileHidden ? 'Показать всё' : 'Скрыть' }}
+                </button>
+              </div>
+            </div>
+          </section>
+          <section
+            class="reviews-wrapper"
+            :class="menu ? 'hidden-open-menu' : '' "
+          >
+            <div class="container">
+              <div class="glider-contain multiple">
+                <h2 class="reviews-title">{{ title[4] }}</h2>
+                <div class="glider reviews">
+                  <div class="product-slide" v-for="item in 6">
+                    <div class="reviews-card">
+                      <div class="reviews-head">
+                        <div class="reviews-head--img">
+                          <img src="./assets/img/reviews/girl.png" />
+                        </div>
+                        <div class="reviews-head--title">
+                          <h5 class="reviews-head--name">
+                            Надежда Наширбанова
+                          </h5>
+                          <span class="reviews-head--data"
+                            >5 авг 2017 в 9:58</span
+                          >
+                        </div>
+                      </div>
+                      <div class="reviews-comment">
+                        <p>
+                          Cпасибо за быструю доставку! Отличный поздний ужин
+                          после рабочего дня )
+                        </p>
+                        <img src="./assets/img/reviews/rewiews-1.png" />
+                      </div>
+                      <div class="reviews-footer">
+                        <div class="reviews-footer--social">
+                          <div class="reviews-footer--heart">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="15"
+                              height="15"
+                              viewbox="0 0 24 24"
+                            >
+                              <path
+                                d="M12 4.435c-1.989-5.399-12-4.597-12 3.568 0 4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 0-8.118-10-8.999-12-3.568z"
+                              ></path>
+                            </svg>
+                          </div>
+                          <div class="reviews-footer--comment">
+                            <svg
+                              viewbox="0 0 60 60"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M54,2H6C2.748,2,0,4.748,0,8v33c0,3.252,2.748,6,6,6h28.558l9.703,10.673C44.454,57.885,44.724,58,45,58  c0.121,0,0.243-0.022,0.361-0.067C45.746,57.784,46,57.413,46,57V47h8c3.252,0,6-2.748,6-6V8C60,4.748,57.252,2,54,2z"
+                              ></path>
+                            </svg>
+                          </div>
+                          <div class="reviews-footer--share">
+                            <svg
+                              viewbox="0 0 525.15 525.15"
+                              xml:space="preserve"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="m420.74 371.22c-20.021 0-37.942 7.855-51.596 20.24l-188.03-109.36c1.357-6.061 2.407-12.166 2.407-18.468s-1.072-12.385-2.407-18.468l185.9-108.34c14.179 13.129 32.931 21.334 53.719 21.334 43.828 0 79.145-35.251 79.145-79.079 0-43.74-35.339-79.078-79.145-79.078-43.741 0-79.079 35.338-79.079 79.057 0 6.389 1.072 12.385 2.407 18.468l-185.9 108.42c-14.201-13.194-32.931-21.378-53.741-21.378-43.828 0-79.145 35.317-79.145 79.057s35.317 79.079 79.145 79.079c20.787 0 39.54-8.206 53.719-21.334l187.7 109.6c-1.291 5.58-2.101 11.4-2.101 17.199 0 42.45 34.594 76.979 76.979 76.979 42.428 0 77.044-34.507 77.044-76.979s-34.593-76.957-77.021-76.957z"
+                              ></path>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="reviews-footer--button">
+                          <button><span>Подписаться</span></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section
+            class="feedback"
+            ref="feedback"
+            :class="menu ? 'hidden-open-menu' : '' "
+          >
+            <div class="container">
+              <div class="feedback-content">
+                <span class="feedback-content--subtitle">Есть вопросы?</span>
+                <h2 class="feedback-content--title">Оставьте свои контакты</h2>
+                <form class="feedback-form">
+                  <input type="text" placeholder="Имя" /><input
+                    type="text"
+                    placeholder="Телефон"
+                  /><button>Отправить</button>
+                </form>
+                <span class="feedback-content--note"
+                  >Нажимая на кнопку «Отправить», вы даете согласие на обработку
+                  своих персональных данных.</span
+                >
+              </div>
+            </div>
+          </section>
+          <section class="about" :class="menu ? 'hidden-open-menu' : '' ">
+            <div class="container">
+              <h2 class="about-title">{{ title[5] }}</h2>
+              <div class="about-container">
+                <strong class="about-content--title"
+                  >Заказ и доставка роллов, пиццы и WOK(Вок) в городе
+                  Курск</strong
+                >
+                <div class="about-content">
+                  <div class="about-content--text">
+                    <p>
+                      Суши МИЮШИ открылись в октябре 2012г. и уже завоевали
+                      успех у тех, кто ценит японскую кухню и качественное
+                      приготовление блюд.
+                    </p>
+                    <p>
+                      C 2013 года мы осуществляем не только доставку на дом,
+                      теперь для вас открыт наш уютный небольшой зал. Придя
+                      сюда, вы сможете плотно пообедать, насладиться прекрасными
+                      напитками, посидеть с друзьями или обзавестись новыми
+                      знакомствами.
+                    </p>
+                    <p>
+                      Открывая зал, Мы преследовали цель предоставить своим
+                      посетителям максимум удобства и комфорта, поэтому придя
+                      сюда в первый раз, вы почувствуете себя как рыба в вода,
+                      окунувшись в домашнюю и тёплую обстановку!
+                    </p>
+                    <p :class="aboutHidden ? 'hidden' : 'visible'">
+                      Особое внимание мы уделяем организации доставки суши и
+                      других блюд, которая осуществляется только по г. Курске.
+                      Чёткая и слаженная работа курьеров позволяет максимально
+                      сократить время от приготовления блюда до его попадания на
+                      стол заказчику. Как правило, оно составляет от 20 до 60
+                      минут в зависимости от местонахождения клиента. Операторы
+                      службы доставки всегда осведомлены обо всех изменениях
+                      времени доставки и предупреждают клиентов заранее, а при
+                      возможных серьёзных задержках в связи с дорожной ситуацией
+                      предложат Вам альтернативу. Мы берёмся только за ту
+                      работу, которую можем выполнить в срок.
+                    </p>
+                    <p
+                      class="about-content--last"
+                      :class="aboutHidden ? 'hidden' : 'visible'"
+                    >
+                      В меню суши МИЮШИ предоставленно всё многообразие японской
+                      кухни. Классические суши, и роллы приготовленны в
+                      соответствии с традиционными рецептами. Для любителей
+                      нежных и тающих во рту блюд предлагаются роллы с мясом
+                      краба, а также для больших любителей копчёного угря
+                      потрясающий ролл Дракон. Для желающих попробовать что-то
+                      новое и необычное - острые ГУНКАНЫ и новинка нашего меню -
+                      ИНАРИ, широкий выбор горячих роллов. Большим компаниям
+                      будет удобно заказать суши и роллы, объединенные в сеты,
+                      включающие сразу несколько видов каждого из этих блюд.
+                      Кроме того, меню суши МИЮШИ не ограниченно только японской
+                      кухней, здесь всегда можно заказать горячие и холодные
+                      блюда ЛАПША или РИС WOK с различными мясными и рыбными
+                      наполнителями, салаты, горячие закуски и различные
+                      напитки.
+                    </p>
+                    <button
+                      class="about-mobile--button"
+                      @click="aboutHidden = !aboutHidden"
+                    >
+                      {{ aboutHidden ? 'Показать всё' : 'Скрыть' }}
+                    </button>
+                  </div>
+                  <div class="about-content--img">
+                    <img src="./assets/img/about.png" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <footer :class="menu ? 'hidden-open-menu' : '' ">
+          <div class="container">
+            <div class="footer-container">
+              <div class="footer-main">
+                <span>Суши</span><span>Гуканы</span><span>Инари</span
+                ><span>Супы</span><span>Салаты</span><span>Горячие закуски</span
+                ><span>Десерты</span><span>Напитки</span
+                ><span>Дополнительно</span>
+              </div>
+              <div class="footer-sets">
+                <span class="footer-title">Сеты</span>
+                <div class="footer-sets--container">
+                  <div class="footer-sets--price">
+                    <span>до 500 руб.</span><span>до 1000 руб. (для двоих)</span
+                    ><span>до 1500 руб. (для троих)</span
+                    ><span>до 2000 руб. (большая кампания)</span
+                    ><span
+                      >от 2000 руб. (очень большая <br />
+                      кампания)</span
+                    >
+                  </div>
+                  <div class="footer-sets--name">
+                    <span>С угроём</span><span>Горячие</span
+                    ><span>Запечёные</span><span>Суши</span>
+                  </div>
+                </div>
+              </div>
+              <div class="footer-item">
+                <span class="footer-title">Роллы</span>
+                <div class="footer-item--container">
+                  <span>Традиционные/Классические</span><span>Простые</span
+                  ><span>Тёплые</span><span>Запечёные</span
+                  ><span>Вегитарианские</span>
+                </div>
+              </div>
+              <div class="footer-item">
+                <span class="footer-title">Вок</span>
+                <div class="footer-item--container">
+                  <span>Яичная</span><span>Удон</span><span>Гречневая</span
+                  ><span>Стеклянная</span><span>Рис</span>
+                </div>
+              </div>
+            </div>
+            <div class="footer-mobile">
+              <div class="footer-mobile--title">
+                <span>Меню</span
+                ><img
+                  src="./assets/img/arrow-footer.png"
+                  :class="footerMenu ? 'open':''"
+                  @click="footerMenu = !footerMenu"
+                />
+              </div>
+              <div class="footer-mobile--content" v-if="footerMenu">
+                <span>Суши</span><span>Гуканы</span><span>Инари</span
+                ><span>Супы</span><span>Салаты</span><span>Горячие закуски</span
+                ><span>Десерты</span><span>Напитки</span
+                ><span>Дополнительно</span>
+              </div>
+              <div class="footer-mobile--title">
+                <span>Сеты</span
+                ><img
+                  src="./assets/img/arrow-footer.png"
+                  :class="footerSets ? 'open':''"
+                  @click="footerSets = !footerSets"
+                />
+              </div>
+              <div class="footer-mobile--content" v-if="footerSets">
+                <span>С угроём</span><span>Горячие</span><span>Запечёные</span
+                ><span>Суши</span>
+              </div>
+              <div class="footer-mobile--title">
+                <span>Роллы</span
+                ><img
+                  src="./assets/img/arrow-footer.png"
+                  :class="footerRolls ? 'open':''"
+                  @click="footerRolls = !footerRolls"
+                />
+              </div>
+              <div class="footer-mobile--content" v-if="footerRolls">
+                <span>Традиционные/Классические</span><span>Простые</span
+                ><span>Тёплые</span><span>Запечёные</span
+                ><span>Вегитарианские</span>
+              </div>
+              <div class="footer-mobile--title">
+                <span>Вок</span
+                ><img
+                  src="./assets/img/arrow-footer.png"
+                  :class="footerWok ? 'open':''"
+                  @click="footerWok = !footerWok"
+                />
+              </div>
+              <div class="footer-mobile--content" v-if="footerWok">
+                <span>Яичная</span><span>Удон</span><span>Гречневая</span
+                ><span>Стеклянная</span><span>Рис</span>
+              </div>
+              <div class="footer-mobile--title">
+                <span>Пицца</span
+                ><img
+                  src="./assets/img/arrow-footer.png"
+                  :class="footerPizza ? 'open':''"
+                  @click="footerPizza = !footerPizza"
+                />
+              </div>
+              <div class="footer-mobile--content" v-if="footerPizza">
+                <span>Классическая</span><span>Пепперони</span
+                ><span>Баварская</span><span>Вегетарианская</span>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <div class="footer-bottom--item">
+                <span>МИЮШИ ® 2019</span
+                ><span><a>Соглашение на обработку персональных данных</a></span>
+              </div>
+              <div class="footer-bottom--item">
+                <div class="footer-social">
+                  <div class="footer-social--item">
+                    <a href="https://www.linkedin.com/in/artem-filipopovskii/"
+                      ><img src="assets/img/social/insta.png"
+                    /></a>
+                  </div>
+                  <div class="footer-social--item">
+                    <a href="https://vk.com/art_fill1"
+                      ><img src="assets/img/social/vk.png"
+                    /></a>
+                  </div>
+                  <div class="footer-social--item">
+                    <a href="https://www.linkedin.com/in/artem-filipopovskii/"
+                      ><img src="assets/img/social/facebook.png"
+                    /></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script
+      type="text/javascript"
+      src="./assets/js/vendors.d05f1c1506ed6d193d62.js"
+    ></script
+    ><script
+      type="text/javascript"
+      src="./assets/js/app.d05f1c1506ed6d193d62.js"
+    ></script>
+  </body>
+</html>
