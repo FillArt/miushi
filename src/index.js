@@ -29,6 +29,7 @@ const app = new Vue({
     footerRolls: false,
     footerWok: false,
     footerPizza: false,
+    basketCard: true,
     mobileHidden: true,
     aboutHidden: true,
     productCounter: 0,
@@ -105,8 +106,15 @@ const app = new Vue({
         this.sliderActive -= 1;
         this.openSlide(this.sliderActive);
       }
-    }
+    },
     //---------------------------------------------------
+    scrollFeedback() {
+      let slide = this.$refs.feedback;
+      let top = window.scrollY + slide.getBoundingClientRect().y - 200;
+      window.scrollTo(0, top);
+      this.menu = false;
+      document.getElementById("app").classList.remove("header-menu--bg");
+    }
   },
   computed: {
     ...mapGetters(["sets", "rolls", "pizza", "wok", "stock", "title"])

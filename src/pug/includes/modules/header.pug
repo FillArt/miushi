@@ -18,13 +18,13 @@ header
                 +item-menu('Доставка и оплата')
                 +item-menu('Контакты')
             +header-feedback('+7 (800) 333 2 222', 'Работаем с 11.00 до 23.00')
-            button Обратный звонок
+            button(@click='scrollFeedback()') Обратный звонок
             span.header-modal--sity г.Курск, ул.Ленина, д.3
             span.header-modal--number 78003332222@yandex.ru
 
       .header-feedback
         +header-feedback('+7 (800) 333 2 222', 'Работаем с 11.00 до 23.00')
-        button Обратный звонок
+        button(@click='scrollFeedback()') Обратный звонок
         img(src="/assets/img/user-header.png")
         .header-mobile-cart
           img(src="/assets/img/cart-header.png")
