@@ -39,21 +39,21 @@ const app = new Vue({
     sliderOffsetStep: 0,
     sliderList: [
       {
-        img: "/assets/img/main-slider.jpg",
+        img: "./assets/img/main-slider.jpg",
         title: "Счастливые часы",
         subtitle: "11:00 до 16:00 в будние дни",
         discount: true,
         sumDiscount: 15
       },
       {
-        img: "/assets/img/main-slider.jpg",
+        img: "./assets/img/main-slider.jpg",
         title: "Счастливые часы",
         subtitle: "11:00 до 16:00 в будние дни",
         discount: false,
         sumDiscount: 20
       },
       {
-        img: "/assets/img/main-slider.jpg",
+        img: "./assets/img/main-slider.jpg",
         title: "Счастливые часы",
         subtitle: "11:00 до 16:00 в будние дни",
         discount: true,

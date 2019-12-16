@@ -3,7 +3,7 @@ export default {
         rolls: [
             {
                 title: "Кунсей батакон",
-                img: "/assets/img/rolls/rolls-1.png",
+                img: "./assets/img/rolls/rolls-1.png",
                 quantity: 8,
                 type: 'шт.',
                 grams: 250,
@@ -16,7 +16,7 @@ export default {
             },
             {
                 title: "Унаги диру",
-                img: "/assets/img/rolls/rolls-2.png",
+                img: "./assets/img/rolls/rolls-2.png",
                 quantity: 8,
                 type: 'шт.',
                 grams: 960,
@@ -29,7 +29,7 @@ export default {
             },
             {
                 title: "Филадельфия",
-                img: "/assets/img/rolls/rolls-3.png",
+                img: "./assets/img/rolls/rolls-3.png",
                 quantity: 8,
                 type: 'шт.',
                 grams: 450,
@@ -42,7 +42,7 @@ export default {
             },
             {
                 title: "Мексиканский",
-                img: "/assets/img/rolls/rolls-5.png",
+                img: "./assets/img/rolls/rolls-5.png",
                 quantity: 8,
                 type: 'шт.',
                 grams: 460,
@@ -55,7 +55,7 @@ export default {
             },
             {
                 title: "Кунсей батакон",
-                img: "/assets/img/rolls/rolls-1.png",
+                img: "./assets/img/rolls/rolls-1.png",
                 quantity: 8,
                 type: 'шт.',
                 grams: 250,
@@ -68,7 +68,7 @@ export default {
             },
             {
                 title: "Унаги диру",
-                img: "/assets/img/rolls/rolls-2.png",
+                img: "./assets/img/rolls/rolls-2.png",
                 quantity: 8,
                 type: 'шт.',
                 grams: 960,
@@ -81,7 +81,7 @@ export default {
             },
             {
                 title: "Филадельфия",
-                img: "/assets/img/rolls/rolls-3.png",
+                img: "./assets/img/rolls/rolls-3.png",
                 quantity: 8,
                 type: 'шт.',
                 grams: 450,
@@ -94,7 +94,7 @@ export default {
             },
             {
                 title: "Мексиканский",
-                img: "/assets/img/rolls/rolls-5.png",
+                img: "./assets/img/rolls/rolls-5.png",
                 quantity: 8,
                 type: 'шт.',
                 grams: 460,
@@ -107,7 +107,7 @@ export default {
             },
             {
                 title: "Кунсей батакон",
-                img: "/assets/img/rolls/rolls-1.png",
+                img: "./assets/img/rolls/rolls-1.png",
                 quantity: 8,
                 type: 'шт.',
                 grams: 250,
@@ -120,7 +120,7 @@ export default {
             },
             {
                 title: "Унаги диру",
-                img: "/assets/img/rolls/rolls-2.png",
+                img: "./assets/img/rolls/rolls-2.png",
                 quantity: 8,
                 type: 'шт.',
                 grams: 960,
@@ -133,7 +133,7 @@ export default {
             },
             {
                 title: "Филадельфия",
-                img: "/assets/img/rolls/rolls-3.png",
+                img: "./assets/img/rolls/rolls-3.png",
                 quantity: 8,
                 type: 'шт.',
                 grams: 450,
@@ -146,7 +146,7 @@ export default {
             },
             {
                 title: "Мексиканский",
-                img: "/assets/img/rolls/rolls-5.png",
+                img: "./assets/img/rolls/rolls-5.png",
                 quantity: 8,
                 type: 'шт.',
                 grams: 460,
@@ -159,7 +159,7 @@ export default {
             },
             {
                 title: "Кунсей батакон",
-                img: "/assets/img/rolls/rolls-1.png",
+                img: "./assets/img/rolls/rolls-1.png",
                 quantity: 8,
                 type: 'шт.',
                 grams: 250,
@@ -172,7 +172,7 @@ export default {
             },
             {
                 title: "Унаги диру",
-                img: "/assets/img/rolls/rolls-2.png",
+                img: "./assets/img/rolls/rolls-2.png",
                 quantity: 8,
                 type: 'шт.',
                 grams: 960,
@@ -185,7 +185,7 @@ export default {
             },
             {
                 title: "Филадельфия",
-                img: "/assets/img/rolls/rolls-3.png",
+                img: "./assets/img/rolls/rolls-3.png",
                 quantity: 8,
                 type: 'шт.',
                 grams: 450,
@@ -198,7 +198,7 @@ export default {
             },
             {
                 title: "Мексиканский",
-                img: "/assets/img/rolls/rolls-5.png",
+                img: "./assets/img/rolls/rolls-5.png",
                 quantity: 8,
                 type: 'шт.',
                 grams: 460,

@@ -4,7 +4,7 @@ export default {
       {
         title: "C говядиной",
         wok: true,
-        img: "/assets/img/wok/wok-1.png",
+        img: "./assets/img/wok/wok-1.png",
         submenu: false,
         itemSubmenu: "Китайский соус",
         listSubmenu: {
@@ -26,7 +26,7 @@ export default {
       {
         title: "С курицей",
         wok: true,
-        img: "/assets/img/wok/wok-2.png",
+        img: "./assets/img/wok/wok-2.png",
         submenu: false,
         itemSubmenu: "Китайский соус",
         listSubmenu: {
@@ -48,7 +48,7 @@ export default {
       {
         title: "С морепродуктами",
         wok: true,
-        img: "/assets/img/wok/wok-3.png",
+        img: "./assets/img/wok/wok-3.png",
         submenu: false,
         itemSubmenu: "Китайский соус",
         listSubmenu: {
@@ -70,7 +70,7 @@ export default {
       {
         title: "C овощами",
         wok: true,
-        img: "/assets/img/wok/wok-4.png",
+        img: "./assets/img/wok/wok-4.png",
         submenu: false,
         itemSubmenu: "Китайский соус",
         listSubmenu: {
@@ -92,7 +92,7 @@ export default {
       {
         title: "C говядиной",
         wok: true,
-        img: "/assets/img/wok/wok-1.png",
+        img: "./assets/img/wok/wok-1.png",
         submenu: false,
         itemSubmenu: "Китайский соус",
         listSubmenu: {
@@ -114,7 +114,7 @@ export default {
       {
         title: "С курицей",
         wok: true,
-        img: "/assets/img/wok/wok-2.png",
+        img: "./assets/img/wok/wok-2.png",
         submenu: false,
         itemSubmenu: "Китайский соус",
         listSubmenu: {
@@ -136,7 +136,7 @@ export default {
       {
         title: "С морепродуктами",
         wok: true,
-        img: "/assets/img/wok/wok-3.png",
+        img: "./assets/img/wok/wok-3.png",
         submenu: false,
         itemSubmenu: "Китайский соус",
         listSubmenu: {
@@ -158,7 +158,7 @@ export default {
       {
         title: "C овощами",
         wok: true,
-        img: "/assets/img/wok/wok-4.png",
+        img: "./assets/img/wok/wok-4.png",
         submenu: false,
         itemSubmenu: "Китайский соус",
         listSubmenu: {
@@ -180,7 +180,7 @@ export default {
       {
         title: "C говядиной",
         wok: true,
-        img: "/assets/img/wok/wok-1.png",
+        img: "./assets/img/wok/wok-1.png",
         submenu: false,
         itemSubmenu: "Китайский соус",
         listSubmenu: {
@@ -202,7 +202,7 @@ export default {
       {
         title: "С курицей",
         wok: true,
-        img: "/assets/img/wok/wok-2.png",
+        img: "./assets/img/wok/wok-2.png",
         submenu: false,
         itemSubmenu: "Китайский соус",
         listSubmenu: {
@@ -224,7 +224,7 @@ export default {
       {
         title: "С морепродуктами",
         wok: true,
-        img: "/assets/img/wok/wok-3.png",
+        img: "./assets/img/wok/wok-3.png",
         submenu: false,
         itemSubmenu: "Китайский соус",
         listSubmenu: {
@@ -246,7 +246,7 @@ export default {
       {
         title: "C овощами",
         wok: true,
-        img: "/assets/img/wok/wok-4.png",
+        img: "./assets/img/wok/wok-4.png",
         submenu: false,
         itemSubmenu: "Китайский соус",
         listSubmenu: {
@@ -268,7 +268,7 @@ export default {
       {
         title: "C говядиной",
         wok: true,
-        img: "/assets/img/wok/wok-1.png",
+        img: "./assets/img/wok/wok-1.png",
         submenu: false,
         itemSubmenu: "Китайский соус",
         listSubmenu: {
@@ -290,7 +290,7 @@ export default {
       {
         title: "С курицей",
         wok: true,
-        img: "/assets/img/wok/wok-2.png",
+        img: "./assets/img/wok/wok-2.png",
         submenu: false,
         itemSubmenu: "Китайский соус",
         listSubmenu: {
@@ -312,7 +312,7 @@ export default {
       {
         title: "С морепродуктами",
         wok: true,
-        img: "/assets/img/wok/wok-3.png",
+        img: "./assets/img/wok/wok-3.png",
         submenu: false,
         itemSubmenu: "Китайский соус",
         listSubmenu: {
@@ -334,7 +334,7 @@ export default {
       {
         title: "C овощами",
         wok: true,
-        img: "/assets/img/wok/wok-4.png",
+        img: "./assets/img/wok/wok-4.png",
         submenu: false,
         itemSubmenu: "Китайский соус",
         listSubmenu: {

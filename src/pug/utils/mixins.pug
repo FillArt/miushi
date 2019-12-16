@@ -30,7 +30,7 @@ mixin product-card()
       .product-stock.product-hit(v-if="item.hit")
         span хит
       .product-stock.product-hit(v-if="item.hot")
-        img(src="/assets/img/fire.png", style="height: 30px; width: 23px; margin-top: 10px;")
+        img(src="./assets/img/fire.png", style="height: 30px; width: 23px; margin-top: 10px;")
       img(:src='item.img')
     .product-item--calc
       h3 {{ item.title }}
@@ -52,7 +52,7 @@ mixin product-wok()
     .product-stock.product-hit(v-if="item.hit")
       span хит
     .product-stock.product-hit(v-if="item.hot")
-      img(src="/assets/img/fire.png", style="height: 30px; width: 23px; margin-top: 10px;")
+      img(src="./assets/img/fire.png", style="height: 30px; width: 23px; margin-top: 10px;")
     img(:src='item.img', style="height: 200px; padding: 35px 0 0 0 ")
   .product-item--calc
     h3 {{ item.title }}
@@ -92,7 +92,7 @@ mixin product-wok()
 mixin reviews-card
   .reviews-head
     .reviews-head--img
-      img(src="/assets/img/reviews/girl.png")
+      img(src="./assets/img/reviews/girl.png")
     .reviews-head--title
       h5.reviews-head--name Надежда Наширбанова
       span.reviews-head--data 5 авг 2017 в 9:58
@@ -100,7 +100,7 @@ mixin reviews-card
     p
       | Cпасибо за быструю доставку!
       | Отличный поздний ужин после рабочего дня )
-    img(src="/assets/img/reviews/rewiews-1.png")
+    img(src="./assets/img/reviews/rewiews-1.png")
 
   .reviews-footer
     .reviews-footer--social

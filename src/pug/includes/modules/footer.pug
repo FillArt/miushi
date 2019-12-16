@@ -44,7 +44,7 @@ footer(:class="menu ? 'hidden-open-menu' : '' ")
     .footer-mobile
       .footer-mobile--title
         span Меню
-        img(src="/assets/img/arrow-footer.png", :class="footerMenu ? 'open':''", @click="footerMenu = !footerMenu")
+        img(src="./assets/img/arrow-footer.png", :class="footerMenu ? 'open':''", @click="footerMenu = !footerMenu")
       .footer-mobile--content(v-if="footerMenu")
         span Суши
         span Гуканы
@@ -59,7 +59,7 @@ footer(:class="menu ? 'hidden-open-menu' : '' ")
 
       .footer-mobile--title
         span Сеты
-        img(src="/assets/img/arrow-footer.png", :class="footerSets ? 'open':''", @click="footerSets = !footerSets")
+        img(src="./assets/img/arrow-footer.png", :class="footerSets ? 'open':''", @click="footerSets = !footerSets")
       .footer-mobile--content(v-if="footerSets")
         span С угроём
         span Горячие
@@ -68,7 +68,7 @@ footer(:class="menu ? 'hidden-open-menu' : '' ")
 
       .footer-mobile--title
         span Роллы
-        img(src="/assets/img/arrow-footer.png", :class="footerRolls ? 'open':''"  @click="footerRolls = !footerRolls")
+        img(src="./assets/img/arrow-footer.png", :class="footerRolls ? 'open':''"  @click="footerRolls = !footerRolls")
       .footer-mobile--content(v-if="footerRolls")
         span Традиционные/Классические
         span Простые
@@ -78,7 +78,7 @@ footer(:class="menu ? 'hidden-open-menu' : '' ")
 
       .footer-mobile--title
         span Вок
-        img(src="/assets/img/arrow-footer.png", :class="footerWok ? 'open':''", @click="footerWok = !footerWok")
+        img(src="./assets/img/arrow-footer.png", :class="footerWok ? 'open':''", @click="footerWok = !footerWok")
       .footer-mobile--content(v-if="footerWok")
         span Яичная
         span Удон
@@ -88,7 +88,7 @@ footer(:class="menu ? 'hidden-open-menu' : '' ")
 
       .footer-mobile--title
         span Пицца
-        img(src="/assets/img/arrow-footer.png", :class="footerPizza ? 'open':''", @click="footerPizza = !footerPizza")
+        img(src="./assets/img/arrow-footer.png", :class="footerPizza ? 'open':''", @click="footerPizza = !footerPizza")
       .footer-mobile--content(v-if="footerPizza")
         span Классическая
         span Пепперони

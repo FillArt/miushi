@@ -3,7 +3,7 @@ export default {
     pizza: [
       {
         title: "Баварская",
-        img: "/assets/img/pizza/pizza-1.png",
+        img: "./assets/img/pizza/pizza-1.png",
         type: "см.",
         quantity: 33,
         grams: 250,
@@ -16,7 +16,7 @@ export default {
       },
       {
         title: "Вегетарианская",
-        img: "/assets/img/pizza/pizza-2.png",
+        img: "./assets/img/pizza/pizza-2.png",
         type: "см.",
         quantity: 33,
         grams: 755,
@@ -29,7 +29,7 @@ export default {
       },
       {
         title: "Пепперони",
-        img: "/assets/img/pizza/pizza-3.png",
+        img: "./assets/img/pizza/pizza-3.png",
         type: "см.",
         quantity: 33,
         grams: 615,
@@ -42,7 +42,7 @@ export default {
       },
       {
         title: "Классическая",
-        img: "/assets/img/pizza/pizza-4.png",
+        img: "./assets/img/pizza/pizza-4.png",
         type: "см.",
         quantity: 33,
         grams: 590,
@@ -55,7 +55,7 @@ export default {
       },
       {
         title: "Баварская",
-        img: "/assets/img/pizza/pizza-1.png",
+        img: "./assets/img/pizza/pizza-1.png",
         type: "см.",
         quantity: 33,
         grams: 250,
@@ -68,7 +68,7 @@ export default {
       },
       {
         title: "Вегетарианская",
-        img: "/assets/img/pizza/pizza-2.png",
+        img: "./assets/img/pizza/pizza-2.png",
         quantity: 33,
         grams: 755,
         сalory: 1800,
@@ -80,7 +80,7 @@ export default {
       },
       {
         title: "Пепперони",
-        img: "/assets/img/pizza/pizza-3.png",
+        img: "./assets/img/pizza/pizza-3.png",
         type: "см.",
         quantity: 33,
         grams: 615,
@@ -93,7 +93,7 @@ export default {
       },
       {
         title: "Классическая",
-        img: "/assets/img/pizza/pizza-4.png",
+        img: "./assets/img/pizza/pizza-4.png",
         type: "см.",
         quantity: 33,
         grams: 590,
@@ -107,7 +107,7 @@ export default {
 
       {
         title: "Баварская",
-        img: "/assets/img/pizza/pizza-1.png",
+        img: "./assets/img/pizza/pizza-1.png",
         type: "см.",
         quantity: 33,
         grams: 250,
@@ -120,7 +120,7 @@ export default {
       },
       {
         title: "Вегетарианская",
-        img: "/assets/img/pizza/pizza-2.png",
+        img: "./assets/img/pizza/pizza-2.png",
         type: "см.",
         quantity: 33,
         grams: 755,
@@ -133,7 +133,7 @@ export default {
       },
       {
         title: "Пепперони",
-        img: "/assets/img/pizza/pizza-3.png",
+        img: "./assets/img/pizza/pizza-3.png",
         type: "см.",
         quantity: 33,
         grams: 615,
@@ -146,7 +146,7 @@ export default {
       },
       {
         title: "Классическая",
-        img: "/assets/img/pizza/pizza-4.png",
+        img: "./assets/img/pizza/pizza-4.png",
         type: "см.",
         quantity: 33,
         grams: 590,
@@ -160,7 +160,7 @@ export default {
 
       {
         title: "Баварская",
-        img: "/assets/img/pizza/pizza-1.png",
+        img: "./assets/img/pizza/pizza-1.png",
         type: "см.",
         quantity: 33,
         grams: 250,
@@ -173,7 +173,7 @@ export default {
       },
       {
         title: "Вегетарианская",
-        img: "/assets/img/pizza/pizza-2.png",
+        img: "./assets/img/pizza/pizza-2.png",
         type: "см.",
         quantity: 33,
         grams: 755,
@@ -186,7 +186,7 @@ export default {
       },
       {
         title: "Пепперони",
-        img: "/assets/img/pizza/pizza-3.png",
+        img: "./assets/img/pizza/pizza-3.png",
         type: "см.",
         quantity: 33,
         grams: 615,
@@ -199,7 +199,7 @@ export default {
       },
       {
         title: "Классическая",
-        img: "/assets/img/pizza/pizza-4.png",
+        img: "./assets/img/pizza/pizza-4.png",
         type: "см.",
         quantity: 33,
         grams: 590,

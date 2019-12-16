@@ -3,7 +3,7 @@ export default {
     sets: [
       {
         title: "Cет №10",
-        img: "/assets/img/set/set-10.png",
+        img: "./assets/img/set/set-10.png",
         quantity: 72,
         type: "шт.",
         grams: 1560,
@@ -15,7 +15,7 @@ export default {
       },
       {
         title: "Cет №8",
-        img: "/assets/img/set/set-8.png",
+        img: "./assets/img/set/set-8.png",
         quantity: 24,
         type: "шт.",
         grams: 950,
@@ -27,7 +27,7 @@ export default {
       },
       {
         title: "Миниcет №5",
-        img: "/assets/img/set/set-5.png",
+        img: "./assets/img/set/set-5.png",
         quantity: 14,
         type: "шт.",
         grams: 450,
@@ -39,7 +39,7 @@ export default {
       },
       {
         title: "Cет №6",
-        img: "/assets/img/set/set-6.png",
+        img: "./assets/img/set/set-6.png",
         quantity: 16,
         type: "шт.",
         grams: 460,
@@ -51,7 +51,7 @@ export default {
       },
       {
         title: "Cет №10",
-        img: "/assets/img/set/set-10.png",
+        img: "./assets/img/set/set-10.png",
         quantity: 72,
         type: "шт.",
         grams: 1560,
@@ -63,7 +63,7 @@ export default {
       },
       {
         title: "Cет №8",
-        img: "/assets/img/set/set-8.png",
+        img: "./assets/img/set/set-8.png",
         quantity: 24,
         type: "шт.",
         grams: 950,
@@ -75,7 +75,7 @@ export default {
       },
       {
         title: "Миниcет №5",
-        img: "/assets/img/set/set-5.png",
+        img: "./assets/img/set/set-5.png",
         quantity: 14,
         type: "шт.",
         grams: 450,
@@ -87,7 +87,7 @@ export default {
       },
       {
         title: "Cет №6",
-        img: "/assets/img/set/set-6.png",
+        img: "./assets/img/set/set-6.png",
         quantity: 16,
         type: "шт.",
         grams: 460,
@@ -99,7 +99,7 @@ export default {
       },
       {
         title: "Cет №10",
-        img: "/assets/img/set/set-10.png",
+        img: "./assets/img/set/set-10.png",
         quantity: 72,
         type: "шт.",
         grams: 1560,
@@ -111,7 +111,7 @@ export default {
       },
       {
         title: "Cет №8",
-        img: "/assets/img/set/set-8.png",
+        img: "./assets/img/set/set-8.png",
         quantity: 24,
         type: "шт.",
         grams: 950,
@@ -123,7 +123,7 @@ export default {
       },
       {
         title: "Миниcет №5",
-        img: "/assets/img/set/set-5.png",
+        img: "./assets/img/set/set-5.png",
         quantity: 14,
         type: "шт.",
         grams: 450,
@@ -135,7 +135,7 @@ export default {
       },
       {
         title: "Cет №6",
-        img: "/assets/img/set/set-6.png",
+        img: "./assets/img/set/set-6.png",
         quantity: 16,
         type: "шт.",
         grams: 460,
@@ -147,7 +147,7 @@ export default {
       },
       {
         title: "Cет №10",
-        img: "/assets/img/set/set-10.png",
+        img: "./assets/img/set/set-10.png",
         quantity: 72,
         type: "шт.",
         grams: 1560,
@@ -159,7 +159,7 @@ export default {
       },
       {
         title: "Cет №8",
-        img: "/assets/img/set/set-8.png",
+        img: "./assets/img/set/set-8.png",
         quantity: 24,
         type: "шт.",
         grams: 950,
@@ -171,7 +171,7 @@ export default {
       },
       {
         title: "Миниcет №5",
-        img: "/assets/img/set/set-5.png",
+        img: "./assets/img/set/set-5.png",
         quantity: 14,
         type: "шт.",
         grams: 450,
@@ -183,7 +183,7 @@ export default {
       },
       {
         title: "Cет №6",
-        img: "/assets/img/set/set-6.png",
+        img: "./assets/img/set/set-6.png",
         quantity: 16,
         type: "шт.",
         grams: 460,
