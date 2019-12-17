@@ -246,12 +246,12 @@ header {
   background-repeat: no-repeat;
 }
 .header-contact--sity:before {
-  background-image: url(./assets/img/maps-header.png);
+  background-image: url(../img/maps-header.png);
   width: 11px;
   height: 16px;
 }
 .header-contact--number:before {
-  background-image: url(./assets/img/mail-header.png);
+  background-image: url(../img/mail-header.png);
   width: 11px;
   height: 10px;
 }
@@ -348,7 +348,7 @@ header {
   top: 7px;
   width: 9px;
   height: 5px;
-  background-image: url(./assets/img/menu-arrow.svg);
+  background-image: url(../img/menu-arrow.svg);
 }
 .header-user {
   display: grid;
@@ -382,14 +382,14 @@ header {
   background-repeat: no-repeat;
 }
 .header-user--cabinet:before {
-  background-image: url(./assets/img/user-header.png);
+  background-image: url(../img/user-header.png);
   position: absolute;
   left: -5px;
   width: 22px;
   height: 22px;
 }
 .header-user--basket:before {
-  background-image: url(./assets/img/cart-header.png);
+  background-image: url(../img/cart-header.png);
   position: absolute;
   left: -5px;
   width: 23px;
@@ -594,7 +594,7 @@ header {
 }
 .stock-wrapper {
   margin: 50px 0 0;
-  background-image: url(./assets/img/stock-bg.png);
+  background-image: url(../img/stock-bg.png);
   padding: 55px 0 45px;
 }
 .product-title {
@@ -615,11 +615,11 @@ header {
 }
 .product-title:before {
   margin: 20px 0 0 -150px;
-  background-image: url(./assets/img/left-decor.png);
+  background-image: url(../img/left-decor.png);
   background-repeat: no-repeat;
 }
 .product-title:after {
-  background-image: url(./assets/img/right-decor.png);
+  background-image: url(../img/right-decor.png);
   background-repeat: no-repeat;
   margin: 20px 0 0 40px;
 }
@@ -693,7 +693,7 @@ header {
   height: 20px;
   position: absolute;
   right: 40px;
-  background-image: url(./assets/img/cart-sale.png);
+  background-image: url(../img/cart-sale.png);
 }
 .product-wrapper {
   display: grid;
@@ -743,10 +743,10 @@ header {
   font-size: 1rem;
 }
 .product-payment--minus {
-  background-image: url(./assets/img/minus.png);
+  background-image: url(../img/minus.png);
 }
 .product-payment--plus {
-  background-image: url(./assets/img/pluse.png);
+  background-image: url(../img/pluse.png);
 }
 .product-item--picture {
   position: relative;
@@ -1009,11 +1009,11 @@ header {
 }
 .advantages-title:before {
   margin: 20px 0 0 -150px;
-  background-image: url(./assets/img/left-decor.png);
+  background-image: url(../img/left-decor.png);
   background-repeat: no-repeat;
 }
 .advantages-title:after {
-  background-image: url(./assets/img/right-decor.png);
+  background-image: url(../img/right-decor.png);
   background-repeat: no-repeat;
   margin: 20px 0 0 40px;
 }
@@ -1086,11 +1086,11 @@ header {
 }
 .reviews-title:before {
   margin: 20px 0 0 -150px;
-  background-image: url(./assets/img/left-decor.png);
+  background-image: url(../img/left-decor.png);
   background-repeat: no-repeat;
 }
 .reviews-title:after {
-  background-image: url(./assets/img/right-decor.png);
+  background-image: url(../img/right-decor.png);
   background-repeat: no-repeat;
   margin: 20px 0 0 40px;
 }
@@ -1224,10 +1224,10 @@ header {
   left: -25px;
   top: 2px;
   height: 16px;
-  background-image: url(./assets/img/reviews/vk-social.png);
+  background-image: url(../img/reviews/vk-social.png);
 }
 .feedback {
-  background-image: url(./assets/img/feedback-bg.jpg);
+  background-image: url(../img/feedback-bg.jpg);
   background-size: cover;
   margin: 0 0 70px;
   padding: 81px 0 60px;
@@ -1320,11 +1320,11 @@ header {
 }
 .about-title:before {
   margin: 20px 0 0 -150px;
-  background-image: url(./assets/img/left-decor.png);
+  background-image: url(../img/left-decor.png);
   background-repeat: no-repeat;
 }
 .about-title:after {
-  background-image: url(./assets/img/right-decor.png);
+  background-image: url(../img/right-decor.png);
   background-repeat: no-repeat;
   margin: 20px 0 0 40px;
 }
@@ -1712,12 +1712,12 @@ section {
     background-repeat: no-repeat;
   }
   .header-modal--sity:before {
-    background-image: url(./assets/img/maps-header.png);
+    background-image: url(../img/maps-header.png);
     width: 11px;
     height: 16px;
   }
   .header-modal--number:before {
-    background-image: url(./assets/img/mail-header.png);
+    background-image: url(../img/mail-header.png);
     width: 11px;
     height: 10px;
   }
